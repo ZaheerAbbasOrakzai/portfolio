@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad_vaultguard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="50%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#0A0F1D" />
+    </linearGradient>
+    
+    <radialGradient id="aura_vaultguard" cx="70%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#EF4444" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="accentGrad_vaultguard" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+
+    <pattern id="dotGrid_vaultguard" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+
+    <filter id="glow_vaultguard" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="450" fill="url(#bgGrad_vaultguard)" />
+  <rect width="800" height="450" fill="url(#dotGrid_vaultguard)" />
+  <rect width="800" height="450" fill="url(#aura_vaultguard)" />
+
+  <!-- Outer HUD Frame Border -->
+  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
+  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_vaultguard)" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Corner HUD Accents -->
+  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#10B981" stroke-width="2.5" />
+  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#10B981" stroke-width="2.5" />
+  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#10B981" stroke-width="2.5" />
+  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#10B981" stroke-width="2.5" />
+
+  <!-- Top Telemetry Header -->
+  <g transform="translate(32, 38)">
+    <circle cx="4" cy="4" r="3.5" fill="#10B981" filter="url(#glow_vaultguard)" />
+    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10B981" letter-spacing="1.5">SYS // VAULTGUARD</text>
+    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
+    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  </g>
+
+  <!-- Domain-Specific Interactive Visual Metaphor -->
+  <g transform="translate(40, 75)">
+    
+      <g transform="translate(40, 20)">
+        <rect x="0" y="0" width="350" height="190" rx="8" fill="#0B132B" stroke="#10B981" stroke-width="1.5" />
+        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">SHANNON ENTROPY WAVEFORM</text>
+        <path d="M 20 120 Q 50 40 80 120 T 140 120 T 200 60 T 260 140 T 330 110" fill="none" stroke="#10B981" stroke-width="2" />
+        <line x1="20" y1="70" x2="330" y2="70" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="4,4" />
+        <text x="20" y="65" font-family="monospace" font-size="8" fill="#EF4444">ENTROPY THRESHOLD: H &gt; 4.5 bits</text>
+        <text x="20" y="160" font-family="monospace" font-size="9" fill="#CBD5E1">Scan Latency: &lt;15ms / commit</text>
+
+        <g transform="translate(380, 0)">
+          <rect x="0" y="0" width="340" height="190" rx="8" fill="#0E1626" stroke="#EF4444" stroke-width="1.5" />
+          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#EF4444">120+ SIGNATURE PATTERNS</text>
+          <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">• AWS Secret Access Key</text>
+          <text x="20" y="80" font-family="monospace" font-size="9" fill="#CBD5E1">• OpenAI API Bearer Token</text>
+          <text x="20" y="100" font-family="monospace" font-size="9" fill="#CBD5E1">• Private RSA/ECDH Keys</text>
+          <text x="20" y="120" font-family="monospace" font-size="9" fill="#CBD5E1">• Stripe Live Restricted Key</text>
+          <line x1="20" y1="135" x2="320" y2="135" stroke="#334155" />
+          <text x="20" y="160" font-family="monospace" font-size="9" font-weight="bold" fill="#10B981">PRE-COMMIT BLOCK: 100% FAIL-CLOSED</text>
+        </g>
+      </g>
+    
+  </g>
+
+  <!-- Bottom Identity Bar -->
+  <g transform="translate(32, 405)">
+    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
+    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">VaultGuard</text>
+    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">Shannon Entropy Detector • Zero-Trust Git Hooks</text>
+  </g>
+</svg>

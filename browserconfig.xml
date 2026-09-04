@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<browserconfig>
+  <app>
+    <url>https://zaheerabbasorakzai.gt.tc/</url>
+    <name>Zaheer Abbas - AI Systems Engineer</name>
+    <display>standalone</display>
+    <description>Senior AI Systems Engineer specializing in multi-agent orchestration, LLM fine-tuning, RAG systems, and scalable ML deployment</description>
+    <application>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="theme-color" content="#00d9ff"/>
+      <meta name="description" content="Senior AI Systems Engineer specializing in multi-agent orchestration, LLM fine-tuning, RAG systems, and scalable ML deployment"/>
+      <link rel="icon" href="/icon-192.png"/>
+      <link rel="apple-touch-icon" href="/icon-192.png"/>
+    </application>
+  </app>
+</browserconfig>

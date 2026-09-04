@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zaheerabbasorakzai.gt.tc/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow temporary directories
+Disallow: /tmp/
+Disallow: /.next/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /index.html
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /manifest.json

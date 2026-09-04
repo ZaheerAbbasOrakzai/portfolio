@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad_marketmind" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="50%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#0A0F1D" />
+    </linearGradient>
+    
+    <radialGradient id="aura_marketmind" cx="70%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#00F2FF" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="accentGrad_marketmind" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#00F2FF" />
+    </linearGradient>
+
+    <pattern id="dotGrid_marketmind" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+
+    <filter id="glow_marketmind" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="450" fill="url(#bgGrad_marketmind)" />
+  <rect width="800" height="450" fill="url(#dotGrid_marketmind)" />
+  <rect width="800" height="450" fill="url(#aura_marketmind)" />
+
+  <!-- Outer HUD Frame Border -->
+  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
+  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_marketmind)" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Corner HUD Accents -->
+  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#F59E0B" stroke-width="2.5" />
+  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#F59E0B" stroke-width="2.5" />
+  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#F59E0B" stroke-width="2.5" />
+  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#F59E0B" stroke-width="2.5" />
+
+  <!-- Top Telemetry Header -->
+  <g transform="translate(32, 38)">
+    <circle cx="4" cy="4" r="3.5" fill="#F59E0B" filter="url(#glow_marketmind)" />
+    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#F59E0B" letter-spacing="1.5">SYS // MARKETMIND</text>
+    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
+    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  </g>
+
+  <!-- Domain-Specific Interactive Visual Metaphor -->
+  <g transform="translate(40, 75)">
+    
+      <g transform="translate(40, 20)">
+        <rect x="0" y="0" width="340" height="190" rx="8" fill="#0B132B" stroke="#F59E0B" stroke-width="1.5" />
+        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#F59E0B">COMPETITIVE MATRIX (15+ SAAS SITES)</text>
+        <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">Changelog &amp; Pricing Ingestion</text>
+        <text x="20" y="85" font-family="monospace" font-size="9" fill="#CBD5E1">G2 &amp; Capterra User Sentiment Delta</text>
+        <text x="20" y="110" font-family="monospace" font-size="9" fill="#CBD5E1">Feature Differential Taxonomy</text>
+        <text x="20" y="135" font-family="monospace" font-size="9" fill="#F59E0B">Time Saved: 20+ hrs / report</text>
+
+        <g transform="translate(370, 0)">
+          <rect x="0" y="0" width="350" height="190" rx="8" fill="#0E1626" stroke="#00F2FF" stroke-width="1.5" />
+          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#00F2FF">GTM POSITIONING REPORTS</text>
+          <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">Board-Ready Markdown Decks</text>
+          <text x="20" y="85" font-family="monospace" font-size="9" fill="#CBD5E1">Defensibility &amp; Moat Scoring</text>
+          <text x="20" y="110" font-family="monospace" font-size="9" fill="#CBD5E1">Pricing Tier Elasticity Models</text>
+          <text x="20" y="135" font-family="monospace" font-size="9" fill="#10B981">91% Grounded Fact Accuracy</text>
+        </g>
+      </g>
+    
+  </g>
+
+  <!-- Bottom Identity Bar -->
+  <g transform="translate(32, 405)">
+    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
+    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">MarketMind</text>
+    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">GTM Competitive Moats • Feature Differential Tracker</text>
+  </g>
+</svg>

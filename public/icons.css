@@ -1,0 +1,308 @@
+/* Enterprise Icon System - Local CSS */
+/* Phosphor Icons - Essential Set */
+
+/* Basic Icons */
+.ph {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Essential Icons for Portfolio */
+.ph-cube-bold::before {
+  content: "⬛";
+  font-size: 1.2em;
+}
+
+.ph-envelope-bold::before {
+  content: "✉";
+  font-size: 1.2em;
+}
+
+.ph-cloud-bold::before {
+  content: "☁";
+  font-size: 1.2em;
+}
+
+.ph-cpu-bold::before {
+  content: "⚙";
+  font-size: 1.2em;
+}
+
+.ph-network-bold::before {
+  content: "🌐";
+  font-size: 1.2em;
+}
+
+.ph-database-bold::before {
+  content: "🗄";
+  font-size: 1.2em;
+}
+
+.ph-shield-bold::before {
+  content: "🛡";
+  font-size: 1.2em;
+}
+
+.ph-chart-line-bold::before {
+  content: "📈";
+  font-size: 1.2em;
+}
+
+.ph-rocket-bold::before {
+  content: "🚀";
+  font-size: 1.2em;
+}
+
+.ph-code-bold::before {
+  content: "💻";
+  font-size: 1.2em;
+}
+
+.ph-globe-bold::before {
+  content: "🌍";
+  font-size: 1.2em;
+}
+
+.ph-lightning-bold::before {
+  content: "⚡";
+  font-size: 1.2em;
+}
+
+.ph-terminal-bold::before {
+  content: "💻";
+  font-size: 1.2em;
+}
+
+.ph-magnifying-glass-bold::before {
+  content: "🔍";
+  font-size: 1.2em;
+}
+
+.ph-check-bold::before {
+  content: "✓";
+  font-size: 1.2em;
+}
+
+.ph-arrow-right-bold::before {
+  content: "→";
+  font-size: 1.2em;
+}
+
+.ph-arrow-left-bold::before {
+  content: "←";
+  font-size: 1.2em;
+}
+
+.ph-arrow-up-bold::before {
+  content: "↑";
+  font-size: 1.2em;
+}
+
+.ph-arrow-down-bold::before {
+  content: "↓";
+  font-size: 1.2em;
+}
+
+.ph-plus-bold::before {
+  content: "+";
+  font-size: 1.2em;
+}
+
+.ph-minus-bold::before {
+  content: "-";
+  font-size: 1.2em;
+}
+
+.ph-x-bold::before {
+  content: "×";
+  font-size: 1.2em;
+}
+
+.ph-menu-bold::before {
+  content: "☰";
+  font-size: 1.2em;
+}
+
+.ph-close-bold::before {
+  content: "✕";
+  font-size: 1.2em;
+}
+
+/* Navigation and UI Icons */
+.ph-house-bold::before {
+  content: "🏠";
+  font-size: 1.2em;
+}
+
+.ph-user-bold::before {
+  content: "👤";
+  font-size: 1.2em;
+}
+
+.ph-briefcase-bold::before {
+  content: "💼";
+  font-size: 1.2em;
+}
+
+.ph-academic-cap-bold::before {
+  content: "🎓";
+  font-size: 1.2em;
+}
+
+.ph-github-logo-bold::before {
+  content: "🐙";
+  font-size: 1.2em;
+}
+
+.ph-linkedin-logo-bold::before {
+  content: "💼";
+  font-size: 1.2em;
+}
+
+.ph-whatsapp-logo-bold::before {
+  content: "📱";
+  font-size: 1.2em;
+}
+
+.ph-twitter-logo-bold::before {
+  content: "🐦";
+  font-size: 1.2em;
+}
+
+/* System Icons */
+.ph-server-bold::before {
+  content: "🖥";
+  font-size: 1.2em;
+}
+
+.ph-hard-drive-bold::before {
+  content: "💾";
+  font-size: 1.2em;
+}
+
+.ph-wifi-bold::before {
+  content: "📶";
+  font-size: 1.2em;
+}
+
+.ph-battery-charging-bold::before {
+  content: "🔋";
+  font-size: 1.2em;
+}
+
+.ph-clock-bold::before {
+  content: "🕐";
+  font-size: 1.2em;
+}
+
+.ph-calendar-bold::before {
+  content: "📅";
+  font-size: 1.2em;
+}
+
+.ph-download-bold::before {
+  content: "⬇";
+  font-size: 1.2em;
+}
+
+.ph-upload-bold::before {
+  content: "⬆";
+  font-size: 1.2em;
+}
+
+.ph-eye-bold::before {
+  content: "👁";
+  font-size: 1.2em;
+}
+
+.ph-eye-closed-bold::before {
+  content: "👁‍🗨";
+  font-size: 1.2em;
+}
+
+.ph-lock-bold::before {
+  content: "🔒";
+  font-size: 1.2em;
+}
+
+.ph-lock-open-bold::before {
+  content: "🔓";
+  font-size: 1.2em;
+}
+
+.ph-warning-bold::before {
+  content: "⚠";
+  font-size: 1.2em;
+}
+
+.ph-warning-circle-bold::before {
+  content: "⚠";
+  font-size: 1.2em;
+}
+
+.ph-info-bold::before {
+  content: "ℹ";
+  font-size: 1.2em;
+}
+
+.ph-question-bold::before {
+  content: "?";
+  font-size: 1.2em;
+}
+
+/* Animation for Icons */
+.ph {
+  transition: all 0.3s ease;
+}
+
+.ph:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Icon Sizes */
+.ph-sm {
+  font-size: 0.8em;
+}
+
+.ph-md {
+  font-size: 1em;
+}
+
+.ph-lg {
+  font-size: 1.2em;
+}
+
+.ph-xl {
+  font-size: 1.5em;
+}
+
+/* Icon Colors */
+.ph-primary {
+  color: var(--accent-primary);
+}
+
+.ph-secondary {
+  color: var(--accent-secondary);
+}
+
+.ph-success {
+  color: var(--accent-success);
+}
+
+.ph-warning {
+  color: var(--accent-warning);
+}
+
+.ph-danger {
+  color: var(--accent-danger);
+}
+
+.ph-muted {
+  color: var(--text-muted);
+}

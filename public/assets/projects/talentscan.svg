@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad_talentscan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="50%" stop-color="#050811" />
+      <stop offset="100%" stop-color="#0A0F1D" />
+    </linearGradient>
+    
+    <radialGradient id="aura_talentscan" cx="70%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#00F2FF" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="accentGrad_talentscan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#00F2FF" />
+    </linearGradient>
+
+    <pattern id="dotGrid_talentscan" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
+    </pattern>
+
+    <filter id="glow_talentscan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="450" fill="url(#bgGrad_talentscan)" />
+  <rect width="800" height="450" fill="url(#dotGrid_talentscan)" />
+  <rect width="800" height="450" fill="url(#aura_talentscan)" />
+
+  <!-- Outer HUD Frame Border -->
+  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
+  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_talentscan)" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Corner HUD Accents -->
+  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
+  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
+  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
+  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
+
+  <!-- Top Telemetry Header -->
+  <g transform="translate(32, 38)">
+    <circle cx="4" cy="4" r="3.5" fill="#8B5CF6" filter="url(#glow_talentscan)" />
+    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#8B5CF6" letter-spacing="1.5">SYS // TALENTSCAN</text>
+    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
+    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  </g>
+
+  <!-- Domain-Specific Interactive Visual Metaphor -->
+  <g transform="translate(40, 75)">
+    
+      <g transform="translate(40, 20)">
+        <rect x="0" y="0" width="330" height="190" rx="8" fill="#0B132B" stroke="#8B5CF6" stroke-width="1.5" />
+        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#8B5CF6">NER ENTITY EXTRACTION</text>
+        <text x="20" y="60" font-family="monospace" font-size="9" fill="#00F2FF">• PyTorch, Docker, Kubernetes</text>
+        <text x="20" y="85" font-family="monospace" font-size="9" fill="#00F2FF">• 5 YOE Senior Engineer</text>
+        <text x="20" y="110" font-family="monospace" font-size="9" fill="#00F2FF">• BS Computer Science (COMSATS)</text>
+        <line x1="20" y1="130" x2="310" y2="130" stroke="#334155" />
+        <text x="20" y="155" font-family="monospace" font-size="9" fill="#94A3B8">Parsing Accuracy: 96.8% Multi-Column</text>
+
+        <g transform="translate(360, 0)">
+          <rect x="0" y="0" width="360" height="190" rx="8" fill="#0E1626" stroke="#10B981" stroke-width="1.5" />
+          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">SEMANTIC MATCH &amp; RECRUITER MATRIX</text>
+          <circle cx="80" cy="110" r="45" fill="none" stroke="#1E293B" stroke-width="8" />
+          <path d="M 80 65 A 45 45 0 1 1 45 135" fill="none" stroke="#10B981" stroke-width="8" stroke-linecap="round" />
+          <text x="80" y="112" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#F8FAFC">88%</text>
+          <text x="80" y="127" text-anchor="middle" font-family="monospace" font-size="7" fill="#10B981">MATCH</text>
+          
+          <text x="145" y="85" font-family="monospace" font-size="9" fill="#CBD5E1">Spearman: 0.88 Corr</text>
+          <text x="145" y="110" font-family="monospace" font-size="9" fill="#CBD5E1">Speed: &lt;3s / resume</text>
+          <text x="145" y="135" font-family="monospace" font-size="9" fill="#F8FAFC">Interview Questions Generated</text>
+        </g>
+      </g>
+    
+  </g>
+
+  <!-- Bottom Identity Bar -->
+  <g transform="translate(32, 405)">
+    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
+    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">TalentScan</text>
+    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">Deep Semantic Resume Screener • Career Timeline Validator</text>
+  </g>
+</svg>

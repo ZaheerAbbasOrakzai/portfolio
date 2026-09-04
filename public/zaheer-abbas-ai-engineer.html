@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#00D9FF">
+  <meta name="msapplication-TileColor" content="#0A0F1C">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>Zaheer Abbas — Professional Resume · AI Systems Engineer</title>
+  <meta name="description" content="Professional resume of Zaheer Abbas, AI Systems Engineer specializing in LLM fine-tuning, multi-agent orchestration, RAG systems, and production-grade ML deployment.">
+  <meta name="author" content="Zaheer Abbas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zaheerabbas.netlify.app/zaheer-abbas-ai-engineer.html">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Zaheer Abbas",
+    "jobTitle": "AI Systems Engineer",
+    "email": "abbasorakzai37@gmail.com",
+    "telephone": "+92-336-7971778",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Islamabad",
+      "addressCountry": "PK"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/zaheer-abbas-b5920224b/",
+      "https://huggingface.co/abbasorakzai777",
+      "https://www.facebook.com/zaheerabbasorakzai37"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #0A0F1C;
+      --bg-secondary: #111827;
+      --bg-elevated: linear-gradient(135deg, rgba(26, 35, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      --accent-primary: #00D9FF;
+      --accent-secondary: #7C5CFF;
+      --accent-success: #00C896;
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+      --text-muted: #94A3B8;
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-premium: rgba(0, 217, 255, 0.2);
+      --glow-primary: rgba(0, 217, 255, 0.15);
+      --glow-secondary: rgba(124, 92, 255, 0.12);
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 217, 255, 0.08), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(124, 92, 255, 0.06), transparent),
+        radial-gradient(ellipse 50% 30% at 20% 80%, rgba(0, 200, 150, 0.05), transparent);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 48px) clamp(16px, 4vw, 32px);
+    }
+
+    /* Back to Home */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      margin-bottom: clamp(16px, 3vw, 24px);
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.75; }
+    
+    .resume-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: clamp(16px, 3vw, 24px);
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.25);
+    }
+    
+    .topbar-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    
+    .topbar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.04);
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    
+    .topbar-btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 217, 255, 0.35);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 18px 60px rgba(0, 217, 255, 0.10);
+    }
+    
+    .topbar-btn.primary {
+      background: linear-gradient(135deg, rgba(0,217,255,0.16) 0%, rgba(124,92,255,0.14) 100%);
+      border-color: rgba(0, 217, 255, 0.35);
+      box-shadow: 0 12px 46px rgba(0, 217, 255, 0.10);
+    }
+
+    /* Header */
+    .resume-header {
+      text-align: center;
+      margin-bottom: clamp(24px, 5vw, 40px);
+      padding-bottom: clamp(20px, 4vw, 30px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .resume-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(320px, 1fr);
+      gap: clamp(24px, 4vw, 40px);
+      align-items: start;
+      margin-bottom: clamp(32px, 5vw, 48px);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1.1rem;
+      border-radius: 9999px;
+      background: rgba(0, 217, 255, 0.12);
+      border: 1px solid rgba(0, 217, 255, 0.35);
+      color: var(--accent-primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      max-width: fit-content;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 9999px;
+      background: var(--accent-primary);
+      box-shadow: 0 0 0 8px rgba(0, 217, 255, 0.18);
+    }
+
+    .profile-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(10, 15, 28, 0.98));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      padding: clamp(24px, 4vw, 36px);
+      box-shadow: 
+        0 32px 80px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(0, 217, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .profile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.3), transparent);
+    }
+
+    .profile-image {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      animation: float-img 5s ease-in-out infinite;
+      box-shadow: 0 10px 30px -10px rgba(0, 217, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .profile-image:hover {
+      animation-play-state: paused;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 25px 50px -12px rgba(0, 217, 255, 0.5);
+    }
+
+    @keyframes float-img {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); box-shadow: 0 20px 40px -10px rgba(0, 217, 255, 0.4); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .profile-avatar {
+      height: 220px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: radial-gradient(circle at 30% 20%, rgba(0, 217, 255, 0.18), transparent 45%),
+                  radial-gradient(circle at 80% 90%, rgba(124, 92, 255, 0.16), transparent 50%),
+                  linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(10, 15, 28, 0.98));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 3.2rem;
+      letter-spacing: 0.04em;
+      color: var(--text-primary);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 217, 255, 0.06);
+    }
+    
+    @media (max-width: 900px) {
+      .profile-avatar { height: 200px; }
+    }
+
+    .resume-hero-copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .profile-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 2vw, 18px);
+    }
+
+    .profile-meta-item {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: clamp(16px, 3vw, 20px);
+      box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .profile-meta-item:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      box-shadow: 
+        0 8px 24px rgba(0, 217, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .profile-meta-title {
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .profile-meta-note {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .profile-card-copy {
+      color: var(--text-secondary);
+      margin-top: 16px;
+      line-height: 1.8;
+      font-size: 0.98rem;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, rgba(0,217,255,0.15) 0%, rgba(124,92,255,0.15) 100%);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      color: var(--text-primary);
+      padding: clamp(10px, 2vw, 14px) clamp(14px, 3vw, 20px);
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 
+        0 8px 30px rgba(0,217,255,0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      min-height: 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .download-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .download-btn:hover::before {
+      left: 100%;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 
+        0 18px 60px rgba(0,217,255,0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      border-color: rgba(0, 217, 255, 0.5);
+    }
+
+    @keyframes soft-pulse {
+      0% { box-shadow: 0 6px 20px rgba(0,217,255,0.06); }
+      50% { box-shadow: 0 24px 70px rgba(0,217,255,0.09); }
+      100% { box-shadow: 0 6px 20px rgba(0,217,255,0.06); }
+    }
+
+    .download-cta {
+      animation: soft-pulse 3s infinite ease-in-out;
+    }
+
+    @media (max-width: 900px) {
+      .resume-hero {
+        grid-template-columns: 1fr;
+        gap: clamp(20px, 4vw, 32px);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .profile-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .name {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 6vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .title {
+      font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+      color: var(--accent-primary);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: clamp(8px, 2vw, 20px);
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: clamp(0.8rem, 2vw, 0.95rem);
+      color: var(--text-secondary);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .contact-link {
+      color: var(--accent-primary);
+      text-decoration: none;
+      transition: color 0.3s;
+      word-break: break-all;
+    }
+    .contact-link:hover { color: var(--text-primary); }
+
+    /* Sections */
+    .section { margin-bottom: clamp(28px, 5vw, 40px); }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: clamp(16px, 3vw, 24px);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-primary);
+      display: inline-block;
+    }
+
+    /* Education */
+    .education-item {
+      margin-bottom: 20px;
+      padding: clamp(18px, 3vw, 24px);
+      background: linear-gradient(135deg, rgba(26, 35, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .education-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .education-item:hover {
+      border-color: var(--accent-primary);
+      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .education-item:hover::before {
+      opacity: 1;
+    }
+
+    .degree {
+      font-family: var(--font-heading);
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 5px;
+    }
+    .school { font-size: clamp(0.9rem, 2vw, 1rem); color: var(--text-primary); font-weight: 500; }
+    .graduation-year { color: var(--text-muted); font-size: clamp(0.8rem, 2vw, 0.9rem); margin-top: 5px; }
+    .specialization {
+      color: var(--text-secondary);
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+      gap: clamp(16px, 2vw, 24px);
+    }
+
+    .skill-category {
+      padding: clamp(18px, 3vw, 24px);
+      background: linear-gradient(135deg, rgba(26, 35, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .skill-category::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .skill-category:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .skill-category:hover::before {
+      opacity: 1;
+    }
+    .skill-category-title {
+      font-family: var(--font-heading);
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 12px;
+    }
+    .skill-list { list-style: none; }
+    .skill-item {
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      padding-left: 14px;
+      position: relative;
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      line-height: 1.6;
+    }
+    .skill-item::before { content: "▸"; position: absolute; left: 0; color: var(--accent-primary); }
+
+    /* Experience */
+    .experience-item {
+      margin-bottom: 24px;
+      padding: clamp(18px, 3vw, 24px);
+      background: linear-gradient(135deg, rgba(26, 35, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border-left: 3px solid var(--accent-primary);
+      border-top: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .experience-item:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      border-left-color: var(--accent-primary);
+      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .experience-item:hover::before {
+      opacity: 1;
+    }
+    .job-title {
+      font-family: var(--font-heading);
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 4px;
+    }
+    .company { font-size: clamp(0.88rem, 2vw, 1rem); color: var(--text-primary); font-weight: 500; }
+    .job-duration { color: var(--text-muted); font-size: clamp(0.8rem, 2vw, 0.9rem); margin-top: 4px; }
+    .job-description {
+      color: var(--text-secondary);
+      margin-top: 10px;
+      font-size: clamp(0.85rem, 2vw, 0.95rem);
+      line-height: 1.6;
+    }
+
+    /* Certifications */
+    .cert-item {
+      padding: clamp(14px, 2vw, 18px);
+      background: linear-gradient(135deg, rgba(26, 35, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .cert-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .cert-item:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      box-shadow: 0 6px 16px rgba(0, 217, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+    .cert-item:hover::before {
+      opacity: 1;
+    }
+    .cert-name { font-weight: 600; color: var(--accent-primary); font-size: clamp(0.88rem, 2vw, 1rem); }
+    .cert-issuer { color: var(--text-secondary); font-size: clamp(0.8rem, 2vw, 0.9rem); margin-top: 4px; }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 20px;
+      padding: clamp(18px, 3vw, 24px);
+      background: linear-gradient(135deg, rgba(26, 35, 51, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .project-item:hover {
+      border-color: rgba(0, 217, 255, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 217, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .project-item:hover::before {
+      opacity: 1;
+    }
+    .project-name {
+      font-family: var(--font-heading);
+      font-size: clamp(0.92rem, 2.5vw, 1.05rem);
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 8px;
+    }
+    .project-description { color: var(--text-secondary); font-size: clamp(0.85rem, 2vw, 0.95rem); line-height: 1.6; }
+    .project-tech { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border-subtle); }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tech-tag {
+      display: inline-block;
+      padding: clamp(4px, 1vw, 6px) clamp(10px, 2vw, 14px);
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.12) 0%, rgba(0, 217, 255, 0.05) 100%);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      border-radius: 6px;
+      font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+      color: var(--accent-primary);
+      line-height: 1.4;
+      box-shadow: 0 2px 8px rgba(0, 217, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .tech-tag:hover {
+      background: linear-gradient(135deg, rgba(0, 217, 255, 0.2) 0%, rgba(0, 217, 255, 0.1) 100%);
+      border-color: rgba(0, 217, 255, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 217, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    .resume-footer {
+      text-align: center;
+      margin-top: clamp(24px, 5vw, 40px);
+      padding-top: clamp(20px, 4vw, 30px);
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+    .footer-links {
+      margin-top: 14px;
+      display: flex;
+      gap: clamp(10px, 3vw, 20px);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .footer-link { color: var(--accent-primary); text-decoration: none; transition: color 0.3s; font-size: clamp(0.8rem, 2vw, 0.9rem); }
+    .footer-link:hover { color: var(--text-primary); }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-info { gap: 12px; }
+      .container { padding: clamp(16px, 4vw, 32px) clamp(12px, 4vw, 24px); }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .contact-info { flex-direction: column; align-items: center; gap: 10px; }
+      .contact-item { justify-content: center; }
+      .footer-links { flex-direction: column; align-items: center; gap: 12px; }
+      .container { padding: 16px 12px; }
+    }
+
+    /* Small mobile (320px) */
+    @media (max-width: 360px) {
+      .container { padding: 14px 10px; }
+      .name { font-size: 1.5rem; }
+      .title { font-size: 0.85rem; }
+      .profile-meta { grid-template-columns: 1fr; }
+    }
+
+    /* Large screens */
+    @media (min-width: 1200px) {
+      .container { padding: 48px 32px; }
+      .skills-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* Print */
+    @media print {
+      body { background: white; color: black; }
+      .back-link { display: none; }
+      .resume-header { border-color: #ccc; }
+      .education-item, .skill-category, .experience-item, .cert-item, .project-item {
+        background: #f9f9f9;
+        border-color: #ddd;
+        break-inside: avoid;
+      }
+      .name, .degree, .job-title, .project-name, .cert-name, .skill-category-title { color: #000; -webkit-text-fill-color: #000; }
+      .section-title { color: #000; border-color: #000; }
+      .contact-link, .footer-link { color: #0066cc; }
+      .tech-tag { background: #eee; border-color: #ccc; color: #333; }
+      .skill-item::before { color: #333; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="resume-topbar">
+      <a href="/" class="topbar-btn">&#8592; Home</a>
+      <div class="topbar-actions">
+        <a class="topbar-btn" href="/Zaheer_Abbas_Resume.pdf" download="Zaheer_Abbas_Resume.pdf">Download PDF</a>
+        <a class="topbar-btn primary" href="#experience">Professional Experience</a>
+      </div>
+    </div>
+    <!-- Header -->
+    <div class="resume-header">
+      <h1 class="name">Zaheer Abbas</h1>
+      <div class="title">AI Systems Engineer & Multi-Agent Architect</div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:abbasorakzai37@gmail.com" class="contact-link">abbasorakzai37@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span>📱</span>
+          <a href="https://wa.me/923367971778" class="contact-link">+92-336-7971778</a>
+        </div>
+        <div class="contact-item">
+          <span>🤗</span>
+          <a href="https://huggingface.co/abbasorakzai777" class="contact-link" target="_blank" rel="noopener noreferrer">HuggingFace</a>
+        </div>
+        <div class="contact-item">
+          <span>👤</span>
+          <a href="https://www.facebook.com/zaheerabbasorakzai37" class="contact-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-hero">
+      <div class="resume-hero-copy">
+        <div class="hero-badge">AI Systems Engineer • Resume Canvas</div>
+        <div>
+          <h2 class="name" style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.02;">A refined AI resume layout built for leadership, systems thinking, and production delivery.</h2>
+          <p style="color: var(--text-secondary); margin-top: 16px; max-width: 42rem; line-height: 1.9;">This page pairs a polished personal profile with a leadership-focused technical narrative, using a modern canvas-style presentation built for stakeholders who value measurable outcomes and production reliability.</p>
+        </div>
+
+        <div class="profile-meta">
+          <div class="profile-meta-item">
+            <div class="profile-meta-title">Production AI Systems</div>
+            <div class="profile-meta-note">LLM, RAG, and automation architectures designed for real-world reliability.</div>
+          </div>
+          <div class="profile-meta-item">
+            <div class="profile-meta-title">Computer Vision</div>
+            <div class="profile-meta-note">End-to-end pipelines for image intelligence, inference, and monitoring.</div>
+          </div>
+          <div class="profile-meta-item">
+            <div class="profile-meta-title">Cloud & DevOps</div>
+            <div class="profile-meta-note">Infrastructure, CICD, and deployment practices that keep systems running.</div>
+          </div>
+          <div class="profile-meta-item">
+            <div class="profile-meta-title">Research to Product</div>
+            <div class="profile-meta-note">Bridges academic AI insights into practical, business-ready systems.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-avatar">
+          <img src="/assets/images/zaheer pic.png" alt="Zaheer Abbas" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="profile-card-copy">
+          A modern resume canvas designed to showcase the intersection of AI engineering, product execution, and technical authorship. This profile is built for stakeholders who value reliable systems, measurable outcomes, and practical AI leadership.
+        </div>
+        <div style="margin-top:16px;">
+          <a class="download-btn download-cta" href="/Zaheer_Abbas_Resume.pdf" download="Zaheer_Abbas_Resume.pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 3v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 11l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 21H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <div class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p style="color: var(--text-secondary); line-height: 1.8; margin-top: 15px;">
+        Accomplished AI/ML Engineer with 3+ years of hands-on production experience architecting and deploying scalable, enterprise-grade intelligent systems that generate measurable business outcomes. Specialises in LLM fine-tuning (LoRA/QLoRA/RLHF), Retrieval-Augmented Generation (RAG), multi-agent agentic orchestration, real-time computer vision, and end-to-end MLOps. Proficient across the complete modern AI stack — PyTorch, LangChain, LlamaIndex, HuggingFace Transformers, vector databases (Pinecone, Chroma, Weaviate, FAISS), MLflow, Docker, and Kubernetes. Consistently delivers 89–92% model accuracy, processes 60,000+ records and 5,000+ images monthly, and reduces manual effort by up to 60% through autonomous AI orchestration. Adept at converting cutting-edge research — RLHF, ReAct, chain-of-thought prompting, tool-use, and agentic planning — into robust, high-performance production systems.
+      </p>
+    </div>
+
+    <!-- Core Technical Skills -->
+    <div class="section">
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-category-title">LLMs & Gen AI</div>
+          <ul class="skill-list">
+            <li class="skill-item">GPT-4o, Claude 3, LLaMA 3, Mistral, Gemini</li>
+            <li class="skill-item">RLHF, LoRA, QLoRA, Instruction Tuning</li>
+            <li class="skill-item">Prompt Engineering, Chain-of-Thought, Few-Shot</li>
+            <li class="skill-item">ReAct, Tool Use, Prompt Chaining</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Agentic & Multi-Agent</div>
+          <ul class="skill-list">
+            <li class="skill-item">LangChain, LlamaIndex, CrewAI, AutoGen</li>
+            <li class="skill-item">Agentic Workflows, Inter-Agent Communication</li>
+            <li class="skill-item">Task Decomposition, Memory & Planning</li>
+            <li class="skill-item">Autonomous Pipelines, Tool Orchestration</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">RAG & Vector Search</div>
+          <ul class="skill-list">
+            <li class="skill-item">RAG Pipelines, Hybrid Search</li>
+            <li class="skill-item">Semantic Embeddings, Contextual Retrieval</li>
+            <li class="skill-item">Pinecone, Chroma, Weaviate, FAISS</li>
+            <li class="skill-item">Document Intelligence, Knowledge Graphs</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Deep Learning & ML</div>
+          <ul class="skill-list">
+            <li class="skill-item">PyTorch, TensorFlow, Keras</li>
+            <li class="skill-item">HuggingFace Transformers, XGBoost, scikit-learn</li>
+            <li class="skill-item">LSTM, Prophet, GANs</li>
+            <li class="skill-item">Distributed Training, Federated Learning</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Computer Vision</div>
+          <ul class="skill-list">
+            <li class="skill-item">YOLOv8, OpenCV, Real-time Inference</li>
+            <li class="skill-item">MobileNetV2, ResNet</li>
+            <li class="skill-item">Object Detection, Image Segmentation</li>
+            <li class="skill-item">TensorRT, Edge Deployment, Video Analytics</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">NLP & Arabic AI</div>
+          <ul class="skill-list">
+            <li class="skill-item">AraBERT, spaCy, BERT, Transformers</li>
+            <li class="skill-item">Semantic Similarity, Text Summarization</li>
+            <li class="skill-item">Multilingual NLP, Clinical NLP, NER</li>
+            <li class="skill-item">Islamic Text Analysis, Web Scraping</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">MLOps & Cloud</div>
+          <ul class="skill-list">
+            <li class="skill-item">MLflow, Docker, Kubernetes, CI/CD</li>
+            <li class="skill-item">FastAPI, Flask, Streamlit</li>
+            <li class="skill-item">AWS, Azure, GCP</li>
+            <li class="skill-item">Hugging Face Hub, Model Versioning</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Data Engineering & Full-Stack</div>
+          <ul class="skill-list">
+            <li class="skill-item">Python, SQL, NoSQL, Firebase, Redis</li>
+            <li class="skill-item">Pandas, NumPy, EDA, ETL Pipelines</li>
+            <li class="skill-item">Flutter, Dart, JavaScript, REST APIs</li>
+            <li class="skill-item">Android, Cross-platform AI Integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advanced Expertise -->
+    <div class="section">
+      <h2 class="section-title">Advanced LLM & Prompt Engineering Expertise</h2>
+      <div class="project-item">
+        <ul class="skill-list" style="margin-top: 5px;">
+          <li class="skill-item">4+ years crafting production-grade prompts for GPT-4o, Claude 3, LLaMA 3, and Mistral using few-shot, chain-of-thought, ReAct, tool-use, and RAG techniques — consistently delivering 70%+ efficiency gains in agentic workflow automation.</li>
+          <li class="skill-item">Fine-tuned domain-specific LLMs with LoRA/QLoRA and RLHF reward modelling; achieved 25%+ task-performance improvement over base models on custom evaluation benchmarks.</li>
+          <li class="skill-item">Expert in multi-agent system design (LangChain, CrewAI, AutoGen), RAG architecture, vector database management (Pinecone, Chroma, FAISS), and large-scale semantic embedding pipelines.</li>
+          <li class="skill-item">Delivered code-generation, content-automation, and document-intelligence agents at production scale with MLflow experiment tracking, Dockerised deployment, and Kubernetes horizontal scaling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section" id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="job-title">Senior AI Engineer & Multi-Agent Systems Architect</div>
+        <div class="company">Independent Consultant</div>
+        <div class="job-duration">Jan 2024 – Present · Remote (Global)</div>
+        <div class="job-description">
+          <ul class="skill-list" style="margin-top: 8px;">
+            <li class="skill-item"><strong>Multi-Agent System Deployment:</strong> Designed and deployed ZMAR AI System with 40+ specialised agents. <span style="color: var(--accent-primary);">Impact:</span> Automated 89% of client workflows, reducing processing time by 5.2x.</li>
+            <li class="skill-item"><strong>LLM Fine-tuning & Optimisation:</strong> Fine-tuned and deployed multiple large language models. <span style="color: var(--accent-primary);">Impact:</span> Achieved 92.1% accuracy in Arabic NLP tasks with custom AraBERT models.</li>
+          </ul>
+        </div>
+        <div class="project-tech">
+          <div class="tech-tags">
+            <span class="tech-tag">python</span>
+            <span class="tech-tag">pytorch</span>
+            <span class="tech-tag">tensorflow</span>
+            <span class="tech-tag">llm</span>
+            <span class="tech-tag">multi-agent</span>
+            <span class="tech-tag">fastapi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title">Lead AI Research Engineer</div>
+        <div class="company">Smart Cities Research Consortium</div>
+        <div class="job-duration">Mar 2023 – Jan 2024 · Hybrid (Pakistan/Remote)</div>
+        <div class="job-description">
+          <ul class="skill-list" style="margin-top: 8px;">
+            <li class="skill-item"><strong>AI Urban Nexus Platform Development:</strong> Developed a comprehensive smart city AI platform with YOLOv8 and LSTM integration. <span style="color: var(--accent-primary);">Impact:</span> Improved traffic flow by 34% and emergency response time by 28%.</li>
+          </ul>
+        </div>
+        <div class="project-tech">
+          <div class="tech-tags">
+            <span class="tech-tag">python</span>
+            <span class="tech-tag">tensorflow</span>
+            <span class="tech-tag">yolo</span>
+            <span class="tech-tag">opencv</span>
+            <span class="tech-tag">fastapi</span>
+            <span class="tech-tag">mongodb</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="experience-item">
+        <div class="job-title">Machine Learning Engineer</div>
+        <div class="company">TechVenture Solutions</div>
+        <div class="job-duration">Jun 2022 – Feb 2023 · Islamabad, Pakistan</div>
+        <div class="job-description">
+          <ul class="skill-list" style="margin-top: 8px;">
+            <li class="skill-item"><strong>Arabic NLP Summarisation System:</strong> Built production-ready Arabic text summarisation using AraBERT. <span style="color: var(--accent-primary);">Impact:</span> Achieved 0.847 ROUGE-1 score with 3.2s average processing time.</li>
+            <li class="skill-item"><strong>Fintech Risk Assessment Models:</strong> Developed ML models for credit risk and fraud detection. <span style="color: var(--accent-primary);">Impact:</span> Reduced false positives by 45% while maintaining 98.2% accuracy.</li>
+          </ul>
+        </div>
+        <div class="project-tech">
+          <div class="tech-tags">
+            <span class="tech-tag">python</span>
+            <span class="tech-tag">pytorch</span>
+            <span class="tech-tag">transformers</span>
+            <span class="tech-tag">bert</span>
+            <span class="tech-tag">nlp</span>
+            <span class="tech-tag">fastapi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Projects -->
+    <div class="section">
+      <h2 class="section-title">Key Projects</h2>
+
+      <div class="project-item">
+        <div class="project-name">AI Hadith Authentication System</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Lead Developer & Researcher | University FYP + Freelance | 2025 – Present</div>
+        <div class="project-description">
+          <ul class="skill-list">
+            <li class="skill-item">Conceived and engineered a state-of-the-art Hadith authenticity classification system capable of predicting whether a Hadith is Sahih (authentic), Da'if (weak), or Mawdu' (fabricated).</li>
+            <li class="skill-item">Fine-tuned AraBERT on a purpose-built corpus of 34,000+ verified Hadith narrations, achieving competitive classification accuracy.</li>
+            <li class="skill-item">Architected a robust multilingual web-scraping pipeline to collect, parse, and normalise Arabic Hadith data from authenticated Islamic APIs and scholarly books.</li>
+            <li class="skill-item">Designed an intelligent chain-of-thought reasoning layer that provides scholars with transparent, interpretable classification rationale mapping back to Isnad and semantic patterns in the Matn.</li>
+            <li class="skill-item">Deployed as a FastAPI microservice with a Streamlit research dashboard with sub-300ms response time and Arabic Unicode text native support.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">AI Urban Nexus — Smart City Intelligence Platform</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Team Lead | End-to-End Development</div>
+        <div class="project-description">
+          <ul class="skill-list">
+            <li class="skill-item">Led the full-stack development of a comprehensive smart-city AI platform integrating LSTM, Prophet, XGBoost, and YOLOv8 for real-time traffic flow prediction, energy forecasting, and public-safety analytics.</li>
+            <li class="skill-item">Processed 60,000+ rows of structured data and 5,000+ images through automated ETL and validation pipelines; delivered a FastAPI + vector DB–powered analytics dashboard enabling 40% faster data-driven decision-making.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">ZMAR AI — Multi-Agent Agentic Orchestration Platform</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Lead Developer | Autonomous AI Ecosystem</div>
+        <div class="project-description">
+          <ul class="skill-list">
+            <li class="skill-item">Designed and deployed a sophisticated multi-agent AI ecosystem with 40+ specialised agents (LangChain, CrewAI) equipped with tool-use, episodic memory, and inter-agent communication.</li>
+            <li class="skill-item">Achieved a 60% reduction in manual task-completion time through autonomous orchestration; integrated RAG pipelines and semantic search for context-aware, long-horizon agent reasoning.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Arabic NLP Text Summarisation Engine</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Solo Developer | Transformer-Based Abstractive & Extractive Pipeline</div>
+        <div class="project-description">
+          <ul class="skill-list">
+            <li class="skill-item">Developed a production-grade abstractive and extractive Arabic summarisation system using a fine-tuned AraBERT transformer; achieved ROUGE scores competitive with global state-of-the-art benchmarks.</li>
+            <li class="skill-item">Deployed a Hugging Face Inference–backed FastAPI microservice handling 1,000+ daily requests with a 95% user satisfaction rate.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Healthcare Predictive Analytics Platform</div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">ML Engineer | Clinical Risk Assessment & Diagnostic Support</div>
+        <div class="project-description">
+          <ul class="skill-list">
+            <li class="skill-item">Built HIPAA-compliant patient risk-assessment and diagnostic-support models delivering 89–91% accuracy, incorporating clinical NLP feature engineering and a federated-learning-ready architecture.</li>
+            <li class="skill-item">Reduced model inference latency by 50% via TensorRT quantisation, optimised preprocessing pipelines, and asynchronous FastAPI serving.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-item">
+        <div class="degree">Bachelor of Science in Computer Science</div>
+        <div class="school">COMSATS University Islamabad</div>
+        <div class="graduation-year">Expected Graduation: 2026</div>
+        <div class="specialization">Relevant Coursework: Machine Learning · Deep Learning · Natural Language Processing · Neural Networks · Data Structures & Algorithms · Database Systems · Distributed Computing · Software Engineering</div>
+      </div>
+    </div>
+
+    <!-- Certifications & Achievements -->
+    <div class="section">
+      <h2 class="section-title">Certifications & Professional Development</h2>
+      <div class="cert-item">
+        <div class="cert-name">✓ AI & Machine Learning Internship</div>
+        <div class="cert-issuer">Certura Technologies (Hands-on production ML project delivery)</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">✓ Digital Marketing & SEO Mastery</div>
+        <div class="cert-issuer">DigiSkills Pakistan (Data-driven growth strategies)</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">✓ Freelancing & Client Success</div>
+        <div class="cert-issuer">DigiSkills Pakistan (Professional project management)</div>
+      </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="section">
+      <h2 class="section-title">Additional Information</h2>
+      <div class="project-item">
+        <div class="project-description">
+          <p><strong>Languages:</strong> English (Fluent), Urdu (Native), Pashto (Native), Punjabi (Conversational)</p>
+          <p style="margin-top: 8px;"><strong>Availability:</strong> Full-Time, Remote, Contract, Hybrid</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="resume-footer">
+      <p>Professional Resume of Zaheer Abbas | Last Updated May 2026</p>
+      <div class="footer-links">
+        <a href="https://zaheerabbas.netlify.app/" class="footer-link" target="_blank" rel="noopener noreferrer">Portfolio Website</a>
+        <a href="https://www.linkedin.com/in/zaheer-abbas-b5920224b/" class="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        <a href="https://huggingface.co/abbasorakzai777" class="footer-link" target="_blank" rel="noopener noreferrer">HuggingFace Hub</a>
+        <a href="mailto:abbasorakzai37@gmail.com" class="footer-link">Contact Me</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Print functionality
+    window.addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key === 'p') {
+        e.preventDefault();
+        window.print();
+      }
+    });
+  </script>
+</body>
+</html>

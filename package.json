@@ -1,0 +1,85 @@
+{
+  "name": "zaheer-abbas-site",
+  "version": "1.0.0",
+  "description": "Static-exported Next.js portfolio for Zaheer Abbas, focused on AI systems engineering and InfinityFree deployment.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "preview": "python -m http.server 8001 --directory out",
+    "deploy:prepare": "next build",
+    "seo:audit": "node link-audit-improved.js",
+    "seo:check": "npm run build && npm run seo:audit",
+    "seo:validate": "npx tsx scripts/verify-seo-implementation.ts",
+    "seo:test": "npx tsx scripts/test-seo.ts",
+    "analyze": "ANALYZE=true npm run build",
+    "performance:audit": "npx lighthouse http://localhost:8001 --output=json --output=html --output-path=./performance-audit",
+    "performance:test": "npm run build && npm run preview & npx wait-on http://localhost:8001 && npm run performance:audit",
+    "optimize:images": "node scripts/optimize-images.js",
+    "bundle:analyze": "npm run analyze",
+    "webvitals:test": "npx tsx scripts/test-web-vitals.ts"
+  },
+  "keywords": [
+    "ai-engineering",
+    "machine-learning",
+    "multi-agent-systems",
+    "llm",
+    "computer-vision",
+    "ai-infrastructure",
+    "production-ml",
+    "enterprise-ai",
+    "senior-ai-engineer",
+    "portfolio"
+  ],
+  "author": "Zaheer Abbas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZaheerAbbasOrakzai/portfolio"
+  },
+  "homepage": ".",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.0.27",
+    "autoprefixer": "^10.4.14",
+    "axe-core": "^4.12.1",
+    "clsx": "^1.2.1",
+    "d3": "^7.9.0",
+    "framer-motion": "^7.6.12",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.447.0",
+    "next": "^13.4.10",
+    "postcss": "^8.4.21",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "recharts": "^3.9.2",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^3.4.10",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^13.4.10",
+    "@next/swc-win32-x64-msvc": "^13.4.10",
+    "@types/d3": "^7.4.3",
+    "@types/node": "25.8.0",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.8",
+    "lighthouse": "^10.4.0",
+    "puppeteer": "^25.3.0",
+    "sharp-cli": "^5.2.0",
+    "svgo": "^4.0.2",
+    "tsx": "^3.12.7",
+    "typescript": "7.0.2",
+    "wait-on": "^7.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
