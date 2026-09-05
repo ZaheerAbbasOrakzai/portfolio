@@ -17,7 +17,7 @@ export const verifiedCertifications: VerifiedCertification[] = [
     category: 'ml-ai',
     imagePath: '/assets/certifications/zaheer abbas - Intro to Machine Learning.png',
     issueDate: 'Verified',
-    verificationUrl: 'https://www.kaggle.com/zaheerabbas',
+    verificationUrl: 'https://www.kaggle.com/zaheerabbasorakzai',
     skills: ['Model Validation', 'Decision Trees', 'Random Forests', 'Underfitting & Overfitting']
   },
   {
@@ -27,7 +27,7 @@ export const verifiedCertifications: VerifiedCertification[] = [
     category: 'ml-ai',
     imagePath: '/assets/certifications/zaheer abbas - Time Series.png',
     issueDate: 'Verified',
-    verificationUrl: 'https://www.kaggle.com/zaheerabbas',
+    verificationUrl: 'https://www.kaggle.com/zaheerabbasorakzai',
     skills: ['Trend Analysis', 'Seasonality', 'Time Series as Features', 'Hybrid Forecasting']
   },
   {

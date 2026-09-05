@@ -10,7 +10,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/zaheerabbasorakzai',
   github: 'https://github.com/ZaheerAbbasOrakzai',
   huggingFace: 'https://huggingface.co/abbasorakzai777',
-  kaggle: 'https://www.kaggle.com/zaheerabbas',
+  kaggle: 'https://www.kaggle.com/zaheerabbasorakzai',
   website: 'https://zaheerabbasorakzai.gt.tc',
   resumePath: '/Zaheer_Abbas_Resume.pdf',
   resumePagePath: '/zaheer-abbas-ai-engineer.html',

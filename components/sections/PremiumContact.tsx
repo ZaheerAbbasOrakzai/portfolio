@@ -217,7 +217,7 @@ export const PremiumContact: React.FC = () => {
 
               {/* Kaggle */}
               <a
-                href={profile.kaggle || 'https://www.kaggle.com/zaheerabbas'}
+                href={profile.kaggle || 'https://www.kaggle.com/zaheerabbasorakzai'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-4 rounded-xl bg-[#0A0F1E] border border-[#1F2937] hover:border-cyan-500/50 transition-colors flex items-center justify-between group shadow-sm"
