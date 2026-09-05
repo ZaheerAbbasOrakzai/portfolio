@@ -43,7 +43,7 @@
       <text x="120" y="30" text-anchor="middle" font-family="monospace" font-size="10" fill="#A3E635">Balance Sheets</text>
     
       <rect x="0" y="55" width="240" height="40" rx="6" fill="#152D0A" stroke="#65A30D" stroke-width="1" opacity="0.8"/>
-      <text x="120" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#A3E635">Earnings Call Q&A</text>
+      <text x="120" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#A3E635">Earnings Call Q&amp;A</text>
     
       <rect x="0" y="105" width="240" height="40" rx="6" fill="#152D0A" stroke="#65A30D" stroke-width="1" opacity="0.8"/>
       <text x="120" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#A3E635">10-K Parsing</text>
@@ -70,6 +70,6 @@
   <g transform="translate(30,410)">
     <line x1="0" y1="-8" x2="740" y2="-8" stroke="#4D7C0F" stroke-width="1"/>
     <text x="0" y="12" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">AlphaResearch</text>
-    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#65A30D">Balance Sheets • Earnings Call Q&A • 10-K Parsing</text>
+    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#65A30D">Balance Sheets • Earnings Call Q&amp;A • 10-K Parsing</text>
   </g>
 </svg>
