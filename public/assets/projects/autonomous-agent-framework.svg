@@ -1,92 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad_autonomous-agent-framework" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#0A0F1D" />
+    <linearGradient id="autonomousagentframeworksvg_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1A0D"/>
+      <stop offset="100%" stop-color="#051005"/>
     </linearGradient>
-    
-    <radialGradient id="aura_autonomous-agent-framework" cx="70%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22" />
-      <stop offset="50%" stop-color="#10B981" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="accentGrad_autonomous-agent-framework" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8B5CF6" />
-      <stop offset="100%" stop-color="#10B981" />
-    </linearGradient>
-
-    <pattern id="dotGrid_autonomous-agent-framework" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
-    </pattern>
-
-    <filter id="glow_autonomous-agent-framework" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <filter id="autonomousagentframeworksvg_g"><feGaussianBlur stdDeviation="5"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+    <style>
+      @keyframes autonomousagentframeworksvg_draw { 0%{stroke-dashoffset:800} 100%{stroke-dashoffset:0} }
+      @keyframes autonomousagentframeworksvg_pulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+      @keyframes autonomousagentframeworksvg_bar { 0%{width:0} 50%{width:100%} 100%{width:100%} }
+      .autonomousagentframeworksvg_line { stroke-dasharray:800; animation: autonomousagentframeworksvg_draw 4s ease-out forwards; }
+      .autonomousagentframeworksvg_dot { animation: autonomousagentframeworksvg_pulse 2.5s ease-in-out infinite; }
+    </style>
   </defs>
-
-  <!-- Background Base -->
-  <rect width="800" height="450" fill="url(#bgGrad_autonomous-agent-framework)" />
-  <rect width="800" height="450" fill="url(#dotGrid_autonomous-agent-framework)" />
-  <rect width="800" height="450" fill="url(#aura_autonomous-agent-framework)" />
-
-  <!-- Outer HUD Frame Border -->
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_autonomous-agent-framework)" stroke-width="1.5" stroke-opacity="0.4" />
-
-  <!-- Corner HUD Accents -->
-  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-
-  <!-- Top Telemetry Header -->
-  <g transform="translate(32, 38)">
-    <circle cx="4" cy="4" r="3.5" fill="#8B5CF6" filter="url(#glow_autonomous-agent-framework)" />
-    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#8B5CF6" letter-spacing="1.5">SYS // AUTONOMOUS-AGENT-FRAMEWORK</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
-    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  <rect width="800" height="450" fill="url(#autonomousagentframeworksvg_bg)"/>
+  
+  <!-- Header -->
+  <g transform="translate(30,30)">
+    <circle cx="6" cy="6" r="5" fill="#16A34A" filter="url(#autonomousagentframeworksvg_g)"/>
+    <text x="20" y="10" font-family="'JetBrains Mono',monospace" font-size="11" fill="#16A34A" font-weight="700" letter-spacing="2">AGENTIC RUNTIME</text>
+    <line x1="0" y1="20" x2="740" y2="20" stroke="#15803D" stroke-width="1"/>
   </g>
-
-  <!-- Domain-Specific Interactive Visual Metaphor -->
-  <g transform="translate(40, 75)">
+  
+  <!-- Signal Chart -->
+  <g transform="translate(30,60)">
+    <rect x="0" y="0" width="470" height="160" rx="8" fill="#0A2D10" stroke="#15803D" stroke-width="1"/>
+    <polyline class="autonomousagentframeworksvg_line" points="20,65 60,85 100,129 140,113 180,98 220,94 260,112 300,76 340,83 380,102 420,97 460,77 500,88 540,92 580,113 620,118 660,57 700,59" fill="none" stroke="#16A34A" stroke-width="2.5" filter="url(#autonomousagentframeworksvg_g)"/>
+    <polyline class="autonomousagentframeworksvg_line" points="20,78 60,99 100,110 140,113 180,107 220,81 260,128 300,75 340,74 380,87 420,70 460,94 500,63 540,66 580,125 620,85 660,106 700,126" fill="none" stroke="#4ADE80" stroke-width="1.5" opacity="0.5" style="animation-delay:0.5s"/>
+    <line x1="0" y1="15" x2="470" y2="15" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="50" x2="470" y2="50" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="85" x2="470" y2="85" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="120" x2="470" y2="120" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="155" x2="470" y2="155" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <text x="10" y="155" font-family="monospace" font-size="9" fill="#64748B">Real-time telemetry — 500ms sampling interval</text>
+  </g>
+  
+  <!-- Architecture Blocks -->
+  <g transform="translate(530,60)">
+    <text x="0" y="-5" font-family="monospace" font-size="10" fill="#4ADE80" font-weight="700">ARCHITECTURE</text>
     
-      <g transform="translate(40, 20)">
-        <rect x="0" y="0" width="340" height="190" rx="8" fill="#0B132B" stroke="#8B5CF6" stroke-width="1.5" />
-        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#8B5CF6">FINITE STATE MACHINE (FSM)</text>
-        
-        <circle cx="60" cy="80" r="20" fill="#0E1626" stroke="#00F2FF" />
-        <text x="60" y="83" text-anchor="middle" font-family="monospace" font-size="7" fill="#F8FAFC">PLAN</text>
-
-        <circle cx="170" cy="80" r="20" fill="#0E1626" stroke="#8B5CF6" />
-        <text x="170" y="83" text-anchor="middle" font-family="monospace" font-size="7" fill="#F8FAFC">TOOL</text>
-
-        <circle cx="280" cy="80" r="20" fill="#0E1626" stroke="#10B981" />
-        <text x="280" y="83" text-anchor="middle" font-family="monospace" font-size="7" fill="#F8FAFC">VERIFY</text>
-
-        <line x1="80" y1="80" x2="150" y2="80" stroke="#00F2FF" stroke-width="2" />
-        <line x1="190" y1="80" x2="260" y2="80" stroke="#8B5CF6" stroke-width="2" />
-        <path d="M 280 100 Q 170 140 60 100" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3,3" />
-        <text x="170" y="150" text-anchor="middle" font-family="monospace" font-size="8" fill="#EF4444">Loop Prevention &amp; Step Budget Enforcement</text>
-
-        <g transform="translate(370, 0)">
-          <rect x="0" y="0" width="350" height="190" rx="8" fill="#0E1626" stroke="#10B981" stroke-width="1.5" />
-          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">EPISODIC &amp; SEMANTIC MEMORY</text>
-          <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">Top-K Vector Context Retrieval</text>
-          <text x="20" y="85" font-family="monospace" font-size="9" fill="#CBD5E1">Tool Dispatch Overhead: &lt;10ms</text>
-          <text x="20" y="110" font-family="monospace" font-size="9" fill="#CBD5E1">JSON-Schema Input Type Validation</text>
-          <text x="20" y="135" font-family="monospace" font-size="9" fill="#CBD5E1">Self-Correction Feedback Loop</text>
-        </g>
-      </g>
+      <rect x="0" y="5" width="240" height="40" rx="6" fill="#0A2D10" stroke="#16A34A" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="30" text-anchor="middle" font-family="monospace" font-size="10" fill="#4ADE80">Goal Decomposition</text>
+    
+      <rect x="0" y="55" width="240" height="40" rx="6" fill="#0A2D10" stroke="#16A34A" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#4ADE80">Memory Loops</text>
+    
+      <rect x="0" y="105" width="240" height="40" rx="6" fill="#0A2D10" stroke="#16A34A" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#4ADE80">Tool Sandbox</text>
     
   </g>
-
-  <!-- Bottom Identity Bar -->
-  <g transform="translate(32, 405)">
-    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
-    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">Autonomous Agent Framework</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">FSM Loop Prevention • ChromaDB Episodic Memory</text>
+  
+  <!-- Metrics Panel -->
+  <g transform="translate(30,240)">
+    <text x="0" y="0" font-family="monospace" font-size="11" fill="#86EFAC" font-weight="700" letter-spacing="2">PERFORMANCE METRICS</text>
+    <rect x="0" y="10" width="740" height="100" rx="8" fill="#0A2D10" stroke="#15803D" stroke-width="1"/>
+    
+      <text x="20" y="38" font-family="monospace" font-size="10" fill="#94A3B8">Accuracy</text>
+      <rect class="autonomousagentframeworksvg_dot" x="120" y="27" width="241" height="14" rx="3" fill="#16A34A" opacity="0.5" style="animation-delay:0s"/>
+      <text x="371" y="38" font-family="monospace" font-size="11" fill="#16A34A" font-weight="700">86%</text>
+      <text x="20" y="66" font-family="monospace" font-size="10" fill="#94A3B8">Latency</text>
+      <rect class="autonomousagentframeworksvg_dot" x="120" y="55" width="143" height="14" rx="3" fill="#16A34A" opacity="0.5" style="animation-delay:0.3s"/>
+      <text x="273" y="66" font-family="monospace" font-size="11" fill="#16A34A" font-weight="700">27ms</text>
+      <text x="20" y="94" font-family="monospace" font-size="10" fill="#94A3B8">Throughput</text>
+      <rect class="autonomousagentframeworksvg_dot" x="120" y="83" width="130" height="14" rx="3" fill="#16A34A" opacity="0.5" style="animation-delay:0.6s"/>
+      <text x="260" y="94" font-family="monospace" font-size="11" fill="#16A34A" font-weight="700">399/s</text>
+  </g>
+  
+  <!-- Bottom Title -->
+  <g transform="translate(30,410)">
+    <line x1="0" y1="-8" x2="740" y2="-8" stroke="#15803D" stroke-width="1"/>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">Autonomous Agent Framework</text>
+    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#16A34A">Goal Decomposition • Memory Loops • Tool Sandbox</text>
   </g>
 </svg>

@@ -1,87 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad_AgentMesh" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#0A0F1D" />
+    <linearGradient id="am_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#021A0D"/>
+      <stop offset="100%" stop-color="#050D0A"/>
     </linearGradient>
-    
-    <radialGradient id="aura_AgentMesh" cx="70%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22" />
-      <stop offset="50%" stop-color="#00F2FF" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="accentGrad_AgentMesh" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8B5CF6" />
-      <stop offset="100%" stop-color="#00F2FF" />
-    </linearGradient>
-
-    <pattern id="dotGrid_AgentMesh" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
-    </pattern>
-
-    <filter id="glow_AgentMesh" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <filter id="am_g"><feGaussianBlur stdDeviation="5"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+    <style>
+      @keyframes am_pulse { 0%,100%{r:12;opacity:0.7} 50%{r:16;opacity:1} }
+      @keyframes am_dash { 0%{stroke-dashoffset:20} 100%{stroke-dashoffset:0} }
+      @keyframes am_orbit { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+      .am_agent { animation: am_pulse 3s ease-in-out infinite; }
+      .am_link { stroke-dasharray:6 4; animation: am_dash 2s linear infinite; }
+    </style>
   </defs>
-
-  <!-- Background Base -->
-  <rect width="800" height="450" fill="url(#bgGrad_AgentMesh)" />
-  <rect width="800" height="450" fill="url(#dotGrid_AgentMesh)" />
-  <rect width="800" height="450" fill="url(#aura_AgentMesh)" />
-
-  <!-- Outer HUD Frame Border -->
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_AgentMesh)" stroke-width="1.5" stroke-opacity="0.4" />
-
-  <!-- Corner HUD Accents -->
-  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#8B5CF6" stroke-width="2.5" />
-
-  <!-- Top Telemetry Header -->
-  <g transform="translate(32, 38)">
-    <circle cx="4" cy="4" r="3.5" fill="#8B5CF6" filter="url(#glow_AgentMesh)" />
-    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#8B5CF6" letter-spacing="1.5">SYS // AGENTMESH</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
-    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  <rect width="800" height="450" fill="url(#am_bg)"/>
+  
+  <!-- Agent Mesh Network -->
+  <line class="am_link" x1="400" y1="120" x2="200" y2="80" stroke="#10B981" stroke-width="1.5" opacity="0.5" style="animation-delay:0s"/>
+  <line class="am_link" x1="400" y1="120" x2="600" y2="80" stroke="#10B981" stroke-width="1.5" opacity="0.5" style="animation-delay:0.15s"/>
+  <line class="am_link" x1="400" y1="120" x2="150" y2="200" stroke="#10B981" stroke-width="1.5" opacity="0.5" style="animation-delay:0.3s"/>
+  <line class="am_link" x1="400" y1="120" x2="650" y2="200" stroke="#10B981" stroke-width="1.5" opacity="0.5" style="animation-delay:0.44999999999999996s"/>
+  <line class="am_link" x1="200" y1="80" x2="150" y2="200" stroke="#34D399" stroke-width="1.5" opacity="0.5" style="animation-delay:0.6s"/>
+  <line class="am_link" x1="600" y1="80" x2="650" y2="200" stroke="#6EE7B7" stroke-width="1.5" opacity="0.5" style="animation-delay:0.75s"/>
+  <line class="am_link" x1="150" y1="200" x2="250" y2="300" stroke="#059669" stroke-width="1.5" opacity="0.5" style="animation-delay:0.8999999999999999s"/>
+  <line class="am_link" x1="650" y1="200" x2="550" y2="300" stroke="#047857" stroke-width="1.5" opacity="0.5" style="animation-delay:1.05s"/>
+  <line class="am_link" x1="250" y1="300" x2="550" y2="300" stroke="#34D399" stroke-width="1.5" opacity="0.5" style="animation-delay:1.2s"/>
+  <line class="am_link" x1="200" y1="80" x2="600" y2="80" stroke="#34D399" stroke-width="1.5" opacity="0.5" style="animation-delay:1.3499999999999999s"/>
+  <line class="am_link" x1="250" y1="300" x2="400" y2="120" stroke="#34D399" stroke-width="1.5" opacity="0.5" style="animation-delay:1.5s"/>
+  <line class="am_link" x1="550" y1="300" x2="400" y2="120" stroke="#6EE7B7" stroke-width="1.5" opacity="0.5" style="animation-delay:1.65s"/>
+    <g>
+      <circle class="am_agent" cx="400" cy="120" r="18" fill="#10B981" opacity="0.2" filter="url(#am_g)" style="animation-delay:0s"/>
+      <circle cx="400" cy="120" r="14" fill="#021A0D" stroke="#10B981" stroke-width="2"/>
+      <text x="400" y="153" text-anchor="middle" font-family="monospace" font-size="9" fill="#10B981" font-weight="700">ORCHESTRATOR</text>
+    </g>
+  
+    <g>
+      <circle class="am_agent" cx="200" cy="80" r="14" fill="#34D399" opacity="0.2" filter="url(#am_g)" style="animation-delay:0.4s"/>
+      <circle cx="200" cy="80" r="10" fill="#021A0D" stroke="#34D399" stroke-width="2"/>
+      <text x="200" y="109" text-anchor="middle" font-family="monospace" font-size="9" fill="#34D399" font-weight="700">PLANNER</text>
+    </g>
+  
+    <g>
+      <circle class="am_agent" cx="600" cy="80" r="14" fill="#6EE7B7" opacity="0.2" filter="url(#am_g)" style="animation-delay:0.8s"/>
+      <circle cx="600" cy="80" r="10" fill="#021A0D" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="600" y="109" text-anchor="middle" font-family="monospace" font-size="9" fill="#6EE7B7" font-weight="700">CRITIC</text>
+    </g>
+  
+    <g>
+      <circle class="am_agent" cx="150" cy="200" r="14" fill="#059669" opacity="0.2" filter="url(#am_g)" style="animation-delay:1.2000000000000002s"/>
+      <circle cx="150" cy="200" r="10" fill="#021A0D" stroke="#059669" stroke-width="2"/>
+      <text x="150" y="229" text-anchor="middle" font-family="monospace" font-size="9" fill="#059669" font-weight="700">CODER</text>
+    </g>
+  
+    <g>
+      <circle class="am_agent" cx="650" cy="200" r="14" fill="#047857" opacity="0.2" filter="url(#am_g)" style="animation-delay:1.6s"/>
+      <circle cx="650" cy="200" r="10" fill="#021A0D" stroke="#047857" stroke-width="2"/>
+      <text x="650" y="229" text-anchor="middle" font-family="monospace" font-size="9" fill="#047857" font-weight="700">RESEARCHER</text>
+    </g>
+  
+    <g>
+      <circle class="am_agent" cx="250" cy="300" r="14" fill="#34D399" opacity="0.2" filter="url(#am_g)" style="animation-delay:2s"/>
+      <circle cx="250" cy="300" r="10" fill="#021A0D" stroke="#34D399" stroke-width="2"/>
+      <text x="250" y="329" text-anchor="middle" font-family="monospace" font-size="9" fill="#34D399" font-weight="700">EXECUTOR</text>
+    </g>
+  
+    <g>
+      <circle class="am_agent" cx="550" cy="300" r="14" fill="#6EE7B7" opacity="0.2" filter="url(#am_g)" style="animation-delay:2.4000000000000004s"/>
+      <circle cx="550" cy="300" r="10" fill="#021A0D" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="550" y="329" text-anchor="middle" font-family="monospace" font-size="9" fill="#6EE7B7" font-weight="700">VALIDATOR</text>
+    </g>
+  
+  <!-- Consensus Panel -->
+  <g transform="translate(30,360)">
+    <rect x="0" y="0" width="740" height="50" rx="6" fill="#021A0D" stroke="#059669" stroke-width="1"/>
+    <text x="20" y="20" font-family="monospace" font-size="10" fill="#34D399">CONSENSUS: 6/7 agents agreed on plan decomposition</text>
+    <text x="20" y="38" font-family="monospace" font-size="9" fill="#64748B">Task Delegation: Round-Robin • Voting: Weighted Majority • Execution: Parallel DAG</text>
   </g>
-
-  <!-- Domain-Specific Interactive Visual Metaphor -->
-  <g transform="translate(40, 75)">
-    
-      <g transform="translate(50, 20)">
-        <circle cx="100" cy="95" r="45" fill="#0E1626" stroke="#8B5CF6" stroke-width="2" />
-        <text x="100" y="90" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#8B5CF6">PLANNER</text>
-        <text x="100" y="105" text-anchor="middle" font-family="monospace" font-size="8" fill="#94A3B8">Goal Decompose</text>
-
-        <circle cx="340" cy="40" r="38" fill="#0E1626" stroke="#00F2FF" stroke-width="1.5" />
-        <text x="340" y="38" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="#00F2FF">CODER</text>
-        <text x="340" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#94A3B8">Tool Exec</text>
-
-        <circle cx="340" cy="150" r="38" fill="#0E1626" stroke="#F59E0B" stroke-width="1.5" />
-        <text x="340" y="148" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="#F59E0B">CRITIC</text>
-        <text x="340" y="162" text-anchor="middle" font-family="monospace" font-size="7" fill="#94A3B8">Reflection</text>
-
-        <circle cx="580" cy="95" r="45" fill="#0E1626" stroke="#10B981" stroke-width="2" />
-        <text x="580" y="90" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#10B981">CONSENSUS</text>
-        <text x="580" y="105" text-anchor="middle" font-family="monospace" font-size="8" fill="#CBD5E1">Gatekeeper</text>
-
-        <line x1="145" y1="80" x2="305" y2="45" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="3,3" />
-        <line x1="145" y1="110" x2="305" y2="145" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="3,3" />
-        <line x1="375" y1="45" x2="535" y2="80" stroke="#00F2FF" stroke-width="2" stroke-dasharray="3,3" />
-        <line x1="375" y1="145" x2="535" y2="110" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3,3" />
-      </g>
-    
-  </g>
-
-  <!-- Bottom Identity Bar -->
-  <g transform="translate(32, 405)">
-    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
-    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">AgentMesh Runtime</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">Actor-Model Orchestration • Distributed Verification</text>
+  
+  <g transform="translate(30,430)">
+    <text x="0" y="0" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">AgentMesh</text>
+    <text x="740" y="0" text-anchor="end" font-family="monospace" font-size="11" fill="#10B981">Multi-Agent Coordination • Consensus Voting • DAG Execution</text>
   </g>
 </svg>

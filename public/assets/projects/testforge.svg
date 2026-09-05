@@ -1,85 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad_testforge" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#0A0F1D" />
+    <linearGradient id="testforgesvg_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1A0A"/>
+      <stop offset="100%" stop-color="#050D05"/>
     </linearGradient>
-    
-    <radialGradient id="aura_testforge" cx="70%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.22" />
-      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="accentGrad_testforge" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981" />
-      <stop offset="100%" stop-color="#8B5CF6" />
-    </linearGradient>
-
-    <pattern id="dotGrid_testforge" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
-    </pattern>
-
-    <filter id="glow_testforge" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <filter id="testforgesvg_g"><feGaussianBlur stdDeviation="5"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+    <style>
+      @keyframes testforgesvg_draw { 0%{stroke-dashoffset:800} 100%{stroke-dashoffset:0} }
+      @keyframes testforgesvg_pulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+      @keyframes testforgesvg_bar { 0%{width:0} 50%{width:100%} 100%{width:100%} }
+      .testforgesvg_line { stroke-dasharray:800; animation: testforgesvg_draw 4s ease-out forwards; }
+      .testforgesvg_dot { animation: testforgesvg_pulse 2.5s ease-in-out infinite; }
+    </style>
   </defs>
-
-  <!-- Background Base -->
-  <rect width="800" height="450" fill="url(#bgGrad_testforge)" />
-  <rect width="800" height="450" fill="url(#dotGrid_testforge)" />
-  <rect width="800" height="450" fill="url(#aura_testforge)" />
-
-  <!-- Outer HUD Frame Border -->
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_testforge)" stroke-width="1.5" stroke-opacity="0.4" />
-
-  <!-- Corner HUD Accents -->
-  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#10B981" stroke-width="2.5" />
-  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#10B981" stroke-width="2.5" />
-  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#10B981" stroke-width="2.5" />
-  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#10B981" stroke-width="2.5" />
-
-  <!-- Top Telemetry Header -->
-  <g transform="translate(32, 38)">
-    <circle cx="4" cy="4" r="3.5" fill="#10B981" filter="url(#glow_testforge)" />
-    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10B981" letter-spacing="1.5">SYS // TESTFORGE</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
-    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  <rect width="800" height="450" fill="url(#testforgesvg_bg)"/>
+  
+  <!-- Header -->
+  <g transform="translate(30,30)">
+    <circle cx="6" cy="6" r="5" fill="#16A34A" filter="url(#testforgesvg_g)"/>
+    <text x="20" y="10" font-family="'JetBrains Mono',monospace" font-size="11" fill="#16A34A" font-weight="700" letter-spacing="2">TEST GENERATION AGENT</text>
+    <line x1="0" y1="20" x2="740" y2="20" stroke="#15803D" stroke-width="1"/>
   </g>
-
-  <!-- Domain-Specific Interactive Visual Metaphor -->
-  <g transform="translate(40, 75)">
+  
+  <!-- Signal Chart -->
+  <g transform="translate(30,60)">
+    <rect x="0" y="0" width="470" height="160" rx="8" fill="#0A2D0A" stroke="#15803D" stroke-width="1"/>
+    <polyline class="testforgesvg_line" points="20,84 60,127 100,101 140,82 180,72 220,96 260,50 300,120 340,66 380,61 420,93 460,62 500,102 540,96 580,116 620,56 660,72 700,63" fill="none" stroke="#16A34A" stroke-width="2.5" filter="url(#testforgesvg_g)"/>
+    <polyline class="testforgesvg_line" points="20,80 60,106 100,124 140,85 180,100 220,110 260,116 300,95 340,125 380,67 420,80 460,107 500,101 540,127 580,106 620,90 660,111 700,68" fill="none" stroke="#4ADE80" stroke-width="1.5" opacity="0.5" style="animation-delay:0.5s"/>
+    <line x1="0" y1="15" x2="470" y2="15" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="50" x2="470" y2="50" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="85" x2="470" y2="85" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="120" x2="470" y2="120" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="155" x2="470" y2="155" stroke="#15803D" stroke-width="0.5" opacity="0.3"/>
+    <text x="10" y="155" font-family="monospace" font-size="9" fill="#64748B">Real-time telemetry — 500ms sampling interval</text>
+  </g>
+  
+  <!-- Architecture Blocks -->
+  <g transform="translate(530,60)">
+    <text x="0" y="-5" font-family="monospace" font-size="10" fill="#4ADE80" font-weight="700">ARCHITECTURE</text>
     
-      <g transform="translate(40, 20)">
-        <rect x="0" y="0" width="320" height="190" rx="8" fill="#0B132B" stroke="#10B981" stroke-width="1.5" />
-        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">BRANCH COVERAGE (90%+ TARGET)</text>
-        <rect x="20" y="55" width="280" height="20" rx="4" fill="#1E293B" />
-        <rect x="20" y="55" width="258" height="20" rx="4" fill="#10B981" />
-        <text x="30" y="69" font-family="monospace" font-size="10" font-weight="bold" fill="#050811">92.4% FIRST-RUN PASS</text>
-        
-        <text x="20" y="105" font-family="monospace" font-size="9" fill="#CBD5E1">• Automated Cyclomatic Tree</text>
-        <text x="20" y="125" font-family="monospace" font-size="9" fill="#CBD5E1">• Mocking External DBs &amp; APIs</text>
-        <text x="20" y="145" font-family="monospace" font-size="9" fill="#CBD5E1">• Fuzz Testing Boundary Inputs</text>
-
-        <g transform="translate(350, 0)">
-          <rect x="0" y="0" width="370" height="190" rx="8" fill="#0E1626" stroke="#00F2FF" stroke-width="1.5" />
-          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#00F2FF">SANDBOXED PYTEST RUNNER</text>
-          <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">Isolated Docker Containers</text>
-          <text x="20" y="85" font-family="monospace" font-size="9" fill="#CBD5E1">Speed: &lt;4s per module</text>
-          <text x="20" y="110" font-family="monospace" font-size="9" fill="#CBD5E1">Jest &amp; Pytest Dual Syntax</text>
-          <text x="20" y="135" font-family="monospace" font-size="9" fill="#10B981">Zero Untested Regressions</text>
-        </g>
-      </g>
+      <rect x="0" y="5" width="240" height="40" rx="6" fill="#0A2D0A" stroke="#16A34A" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="30" text-anchor="middle" font-family="monospace" font-size="10" fill="#4ADE80">Auto Test Gen</text>
+    
+      <rect x="0" y="55" width="240" height="40" rx="6" fill="#0A2D0A" stroke="#16A34A" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#4ADE80">Coverage Analysis</text>
+    
+      <rect x="0" y="105" width="240" height="40" rx="6" fill="#0A2D0A" stroke="#16A34A" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#4ADE80">Mock Fixtures</text>
     
   </g>
-
-  <!-- Bottom Identity Bar -->
-  <g transform="translate(32, 405)">
-    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
-    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">TestForge Autonomous Testing</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">Pytest Suite Generator • 90%+ Branch Coverage</text>
+  
+  <!-- Metrics Panel -->
+  <g transform="translate(30,240)">
+    <text x="0" y="0" font-family="monospace" font-size="11" fill="#BBF7D0" font-weight="700" letter-spacing="2">PERFORMANCE METRICS</text>
+    <rect x="0" y="10" width="740" height="100" rx="8" fill="#0A2D0A" stroke="#15803D" stroke-width="1"/>
+    
+      <text x="20" y="38" font-family="monospace" font-size="10" fill="#94A3B8">Accuracy</text>
+      <rect class="testforgesvg_dot" x="120" y="27" width="474" height="14" rx="3" fill="#16A34A" opacity="0.5" style="animation-delay:0s"/>
+      <text x="604" y="38" font-family="monospace" font-size="11" fill="#16A34A" font-weight="700">97%</text>
+      <text x="20" y="66" font-family="monospace" font-size="10" fill="#94A3B8">Latency</text>
+      <rect class="testforgesvg_dot" x="120" y="55" width="142" height="14" rx="3" fill="#16A34A" opacity="0.5" style="animation-delay:0.3s"/>
+      <text x="272" y="66" font-family="monospace" font-size="11" fill="#16A34A" font-weight="700">7ms</text>
+      <text x="20" y="94" font-family="monospace" font-size="10" fill="#94A3B8">Throughput</text>
+      <rect class="testforgesvg_dot" x="120" y="83" width="479" height="14" rx="3" fill="#16A34A" opacity="0.5" style="animation-delay:0.6s"/>
+      <text x="609" y="94" font-family="monospace" font-size="11" fill="#16A34A" font-weight="700">360/s</text>
+  </g>
+  
+  <!-- Bottom Title -->
+  <g transform="translate(30,410)">
+    <line x1="0" y1="-8" x2="740" y2="-8" stroke="#15803D" stroke-width="1"/>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">TestForge</text>
+    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#16A34A">Auto Test Gen • Coverage Analysis • Mock Fixtures</text>
   </g>
 </svg>

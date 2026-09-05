@@ -1,97 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad_queryforge" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#0A0F1D" />
+    <linearGradient id="queryforgesvg_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05100D"/>
+      <stop offset="100%" stop-color="#0A1A15"/>
     </linearGradient>
-    
-    <radialGradient id="aura_queryforge" cx="70%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#00F2FF" stop-opacity="0.22" />
-      <stop offset="50%" stop-color="#8B5CF6" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="accentGrad_queryforge" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F2FF" />
-      <stop offset="100%" stop-color="#8B5CF6" />
-    </linearGradient>
-
-    <pattern id="dotGrid_queryforge" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
-    </pattern>
-
-    <filter id="glow_queryforge" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <filter id="queryforgesvg_g"><feGaussianBlur stdDeviation="5"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+    <style>
+      @keyframes queryforgesvg_pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+      @keyframes queryforgesvg_flow { 0%{stroke-dashoffset:30} 100%{stroke-dashoffset:0} }
+    </style>
   </defs>
-
-  <!-- Background Base -->
-  <rect width="800" height="450" fill="url(#bgGrad_queryforge)" />
-  <rect width="800" height="450" fill="url(#dotGrid_queryforge)" />
-  <rect width="800" height="450" fill="url(#aura_queryforge)" />
-
-  <!-- Outer HUD Frame Border -->
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_queryforge)" stroke-width="1.5" stroke-opacity="0.4" />
-
-  <!-- Corner HUD Accents -->
-  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-
-  <!-- Top Telemetry Header -->
-  <g transform="translate(32, 38)">
-    <circle cx="4" cy="4" r="3.5" fill="#00F2FF" filter="url(#glow_queryforge)" />
-    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F2FF" letter-spacing="1.5">SYS // QUERYFORGE</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
-    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
-  </g>
-
-  <!-- Domain-Specific Interactive Visual Metaphor -->
-  <g transform="translate(40, 75)">
-    
-      <g transform="translate(40, 20)">
-        <rect x="0" y="0" width="220" height="190" rx="8" fill="#0E1626" stroke="#00F2FF" stroke-width="1.5" />
-        <text x="15" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#00F2FF">NATURAL LANGUAGE</text>
-        <rect x="15" y="45" width="190" height="50" rx="4" fill="#111827" stroke="#334155" />
-        <text x="25" y="68" font-family="monospace" font-size="8" fill="#CBD5E1">"Top 5 churned users with</text>
-        <text x="25" y="82" font-family="monospace" font-size="8" fill="#CBD5E1">&gt;$500 ARR in Q3"</text>
-        <line x1="15" y1="110" x2="205" y2="110" stroke="#334155" />
-        <text x="15" y="130" font-family="monospace" font-size="9" fill="#00F2FF">Schema Introspection</text>
-        <text x="15" y="150" font-family="monospace" font-size="9" fill="#94A3B8">Spider Accuracy: 96.4%</text>
-
-        <path d="M 220 95 L 270 95" stroke="#00F2FF" stroke-width="2" />
-
-        <rect x="270" y="0" width="220" height="190" rx="8" fill="#0E1626" stroke="#8B5CF6" stroke-width="1.5" />
-        <text x="285" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#8B5CF6">AST GUARDRAILS</text>
-        <text x="285" y="55" font-family="monospace" font-size="9" fill="#10B981">✓ Read-Only Enforcement</text>
-        <text x="285" y="75" font-family="monospace" font-size="9" fill="#EF4444">✗ DROP/UPDATE Blocked</text>
-        <text x="285" y="95" font-family="monospace" font-size="9" fill="#CBD5E1">sqlfluff Parser Linter</text>
-        <line x1="285" y1="110" x2="475" y2="110" stroke="#334155" />
-        <text x="285" y="130" font-family="monospace" font-size="9" fill="#8B5CF6">Dialect: PostgreSQL</text>
-        <text x="285" y="150" font-family="monospace" font-size="9" fill="#94A3B8">Index Auto-Suggest</text>
-
-        <path d="M 490 95 L 540 95" stroke="#8B5CF6" stroke-width="2" />
-
-        <rect x="540" y="0" width="180" height="190" rx="8" fill="#0E1626" stroke="#10B981" stroke-width="1.5" />
-        <text x="555" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">EXPLAIN TUNER</text>
-        <text x="555" y="55" font-family="monospace" font-size="9" fill="#CBD5E1">Cost: 14.2 ms</text>
-        <text x="555" y="75" font-family="monospace" font-size="9" fill="#CBD5E1">Seq Scan -&gt; Index</text>
-        <text x="555" y="95" font-family="monospace" font-size="9" fill="#CBD5E1">Hash Join Optimized</text>
-        <line x1="555" y1="110" x2="705" y2="110" stroke="#334155" />
-        <text x="555" y="130" font-family="monospace" font-size="9" fill="#10B981">Sandbox Validated</text>
-        <text x="555" y="150" font-family="monospace" font-size="9" fill="#F8FAFC">DuckDB / Postgres</text>
+  <rect width="800" height="450" fill="url(#queryforgesvg_bg)"/>
+  
+      <g transform="translate(30,65)">
+        <text x="0" y="-10" font-family="monospace" font-size="11" fill="#2DD4BF" font-weight="700">NATURAL LANGUAGE → SQL PIPELINE</text>
+        <rect x="0" y="0" width="740" height="100" rx="8" fill="#0A2D25" stroke="#115E59" stroke-width="1"/>
+        <rect x="15" y="12" width="220" height="35" rx="5" fill="#052E24" stroke="#14B8A6" stroke-width="1"/>
+        <text x="25" y="33" font-family="monospace" font-size="10" fill="#2DD4BF">"Show top 5 customers by</text>
+        <text x="25" y="43" font-family="monospace" font-size="10" fill="#2DD4BF"> revenue this quarter"</text>
+        <text x="255" y="33" font-family="monospace" font-size="16" fill="#14B8A6">→</text>
+        <rect x="285" y="12" width="440" height="76" rx="5" fill="#052E24" stroke="#115E59" stroke-width="1"/>
+        <text x="295" y="30" font-family="monospace" font-size="9" fill="#99F6E4">SELECT c.name, SUM(o.amount) AS revenue</text>
+        <text x="295" y="44" font-family="monospace" font-size="9" fill="#99F6E4">FROM customers c JOIN orders o ON c.id=o.cust_id</text>
+        <text x="295" y="58" font-family="monospace" font-size="9" fill="#99F6E4">WHERE o.date >= DATE_TRUNC('quarter', NOW())</text>
+        <text x="295" y="72" font-family="monospace" font-size="9" fill="#99F6E4">GROUP BY c.name ORDER BY revenue DESC LIMIT 5;</text>
       </g>
-    
-  </g>
-
-  <!-- Bottom Identity Bar -->
-  <g transform="translate(32, 405)">
-    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
-    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">QueryForge</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">Natural Language to SQL • AST Cost Optimizer</text>
+      <g transform="translate(30,185)">
+        <text x="0" y="-10" font-family="monospace" font-size="11" fill="#99F6E4" font-weight="700">SCHEMA INTROSPECTION</text>
+        <rect x="0" y="0" width="350" height="130" rx="8" fill="#0A2D25" stroke="#115E59" stroke-width="1"/>
+        
+          <g transform="translate(15,20)">
+            <rect width="320" height="22" rx="3" fill="#052E24" stroke="#115E59" stroke-width="0.5"/>
+            <text x="10" y="15" font-family="monospace" font-size="9" fill="#2DD4BF">📋 customers (id, name, email, tier)</text>
+          </g>
+        
+          <g transform="translate(15,47)">
+            <rect width="320" height="22" rx="3" fill="#052E24" stroke="#115E59" stroke-width="0.5"/>
+            <text x="10" y="15" font-family="monospace" font-size="9" fill="#2DD4BF">📋 orders (id, cust_id, amount, date)</text>
+          </g>
+        
+          <g transform="translate(15,74)">
+            <rect width="320" height="22" rx="3" fill="#052E24" stroke="#115E59" stroke-width="0.5"/>
+            <text x="10" y="15" font-family="monospace" font-size="9" fill="#2DD4BF">📋 products (id, sku, price, category)</text>
+          </g>
+        
+          <g transform="translate(15,101)">
+            <rect width="320" height="22" rx="3" fill="#052E24" stroke="#115E59" stroke-width="0.5"/>
+            <text x="10" y="15" font-family="monospace" font-size="9" fill="#2DD4BF">📋 inventory (prod_id, qty, warehouse)</text>
+          </g>
+        
+      </g>
+      <g transform="translate(410,185)">
+        <text x="0" y="-10" font-family="monospace" font-size="11" fill="#99F6E4" font-weight="700">INDEX ADVISOR</text>
+        <rect x="0" y="0" width="360" height="130" rx="8" fill="#0A2D25" stroke="#115E59" stroke-width="1"/>
+        <text x="15" y="25" font-family="monospace" font-size="9" fill="#14B8A6">✓ Recommended: CREATE INDEX idx_orders_date</text>
+        <text x="15" y="45" font-family="monospace" font-size="9" fill="#14B8A6">  ON orders(date, cust_id)</text>
+        <text x="15" y="70" font-family="monospace" font-size="9" fill="#F59E0B">⚠ Query Plan: Seq Scan → Index Scan</text>
+        <text x="15" y="90" font-family="monospace" font-size="9" fill="#F59E0B">  Est. speedup: 340ms → 12ms (28x)</text>
+        <text x="15" y="115" font-family="monospace" font-size="9" fill="#10B981">✓ Self-correction: Fixed JOIN ambiguity</text>
+      </g>
+  <g transform="translate(30,410)">
+    <line x1="0" y1="-8" x2="740" y2="-8" stroke="#115E59" stroke-width="1"/>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">QueryForge</text>
+    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#14B8A6">Text-to-SQL • Schema Introspection • Index Advisor</text>
   </g>
 </svg>

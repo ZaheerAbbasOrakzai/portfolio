@@ -1,83 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad_docsynth" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#0A0F1D" />
+    <linearGradient id="docsynthsvg_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0D1A"/>
+      <stop offset="100%" stop-color="#050810"/>
     </linearGradient>
-    
-    <radialGradient id="aura_docsynth" cx="70%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#00F2FF" stop-opacity="0.22" />
-      <stop offset="50%" stop-color="#10B981" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="accentGrad_docsynth" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F2FF" />
-      <stop offset="100%" stop-color="#10B981" />
-    </linearGradient>
-
-    <pattern id="dotGrid_docsynth" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
-    </pattern>
-
-    <filter id="glow_docsynth" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <filter id="docsynthsvg_g"><feGaussianBlur stdDeviation="5"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+    <style>
+      @keyframes docsynthsvg_draw { 0%{stroke-dashoffset:800} 100%{stroke-dashoffset:0} }
+      @keyframes docsynthsvg_pulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+      @keyframes docsynthsvg_bar { 0%{width:0} 50%{width:100%} 100%{width:100%} }
+      .docsynthsvg_line { stroke-dasharray:800; animation: docsynthsvg_draw 4s ease-out forwards; }
+      .docsynthsvg_dot { animation: docsynthsvg_pulse 2.5s ease-in-out infinite; }
+    </style>
   </defs>
-
-  <!-- Background Base -->
-  <rect width="800" height="450" fill="url(#bgGrad_docsynth)" />
-  <rect width="800" height="450" fill="url(#dotGrid_docsynth)" />
-  <rect width="800" height="450" fill="url(#aura_docsynth)" />
-
-  <!-- Outer HUD Frame Border -->
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_docsynth)" stroke-width="1.5" stroke-opacity="0.4" />
-
-  <!-- Corner HUD Accents -->
-  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#00F2FF" stroke-width="2.5" />
-
-  <!-- Top Telemetry Header -->
-  <g transform="translate(32, 38)">
-    <circle cx="4" cy="4" r="3.5" fill="#00F2FF" filter="url(#glow_docsynth)" />
-    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F2FF" letter-spacing="1.5">SYS // DOCSYNTH</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
-    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
+  <rect width="800" height="450" fill="url(#docsynthsvg_bg)"/>
+  
+  <!-- Header -->
+  <g transform="translate(30,30)">
+    <circle cx="6" cy="6" r="5" fill="#2563EB" filter="url(#docsynthsvg_g)"/>
+    <text x="20" y="10" font-family="'JetBrains Mono',monospace" font-size="11" fill="#2563EB" font-weight="700" letter-spacing="2">DOCUMENTATION ENGINE</text>
+    <line x1="0" y1="20" x2="740" y2="20" stroke="#1D4ED8" stroke-width="1"/>
   </g>
-
-  <!-- Domain-Specific Interactive Visual Metaphor -->
-  <g transform="translate(40, 75)">
+  
+  <!-- Signal Chart -->
+  <g transform="translate(30,60)">
+    <rect x="0" y="0" width="470" height="160" rx="8" fill="#0A1535" stroke="#1D4ED8" stroke-width="1"/>
+    <polyline class="docsynthsvg_line" points="20,96 60,70 100,93 140,109 180,88 220,89 260,85 300,86 340,109 380,114 420,115 460,58 500,105 540,71 580,90 620,71 660,93 700,129" fill="none" stroke="#2563EB" stroke-width="2.5" filter="url(#docsynthsvg_g)"/>
+    <polyline class="docsynthsvg_line" points="20,124 60,130 100,127 140,79 180,119 220,92 260,58 300,130 340,109 380,94 420,121 460,83 500,58 540,59 580,66 620,123 660,78 700,84" fill="none" stroke="#60A5FA" stroke-width="1.5" opacity="0.5" style="animation-delay:0.5s"/>
+    <line x1="0" y1="15" x2="470" y2="15" stroke="#1D4ED8" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="50" x2="470" y2="50" stroke="#1D4ED8" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="85" x2="470" y2="85" stroke="#1D4ED8" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="120" x2="470" y2="120" stroke="#1D4ED8" stroke-width="0.5" opacity="0.3"/>
+    <line x1="0" y1="155" x2="470" y2="155" stroke="#1D4ED8" stroke-width="0.5" opacity="0.3"/>
+    <text x="10" y="155" font-family="monospace" font-size="9" fill="#64748B">Real-time telemetry — 500ms sampling interval</text>
+  </g>
+  
+  <!-- Architecture Blocks -->
+  <g transform="translate(530,60)">
+    <text x="0" y="-5" font-family="monospace" font-size="10" fill="#60A5FA" font-weight="700">ARCHITECTURE</text>
     
-      <g transform="translate(40, 20)">
-        <rect x="0" y="0" width="330" height="190" rx="8" fill="#0B132B" stroke="#00F2FF" stroke-width="1.5" />
-        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#00F2FF">AST SIGNATURE INSPECTION</text>
-        <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">def evaluate_rag_pipeline(</text>
-        <text x="40" y="80" font-family="monospace" font-size="9" fill="#94A3B8">dataset: Dataset,</text>
-        <text x="40" y="100" font-family="monospace" font-size="9" fill="#94A3B8">k_val: int = 60</text>
-        <text x="20" y="120" font-family="monospace" font-size="9" fill="#CBD5E1">) -&gt; BenchmarkResult:</text>
-        <text x="20" y="150" font-family="monospace" font-size="8" fill="#00F2FF">100% Parameter &amp; Return Type Match</text>
-
-        <g transform="translate(360, 0)">
-          <rect x="0" y="0" width="360" height="190" rx="8" fill="#0E1626" stroke="#10B981" stroke-width="1.5" />
-          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#10B981">MULTI-FORMAT EXPORT</text>
-          <text x="20" y="60" font-family="monospace" font-size="9" fill="#CBD5E1">✓ Google / Sphinx / JSDoc Standards</text>
-          <text x="20" y="85" font-family="monospace" font-size="9" fill="#CBD5E1">✓ OpenAPI 3.1 YAML / JSON Specs</text>
-          <text x="20" y="110" font-family="monospace" font-size="9" fill="#CBD5E1">✓ Mermaid Architecture Diagrams</text>
-          <text x="20" y="135" font-family="monospace" font-size="9" fill="#10B981">Git Pre-Commit Hook Sync</text>
-        </g>
-      </g>
+      <rect x="0" y="5" width="240" height="40" rx="6" fill="#0A1535" stroke="#2563EB" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="30" text-anchor="middle" font-family="monospace" font-size="10" fill="#60A5FA">Auto Docstrings</text>
+    
+      <rect x="0" y="55" width="240" height="40" rx="6" fill="#0A1535" stroke="#2563EB" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#60A5FA">OpenAPI Specs</text>
+    
+      <rect x="0" y="105" width="240" height="40" rx="6" fill="#0A1535" stroke="#2563EB" stroke-width="1" opacity="0.8"/>
+      <text x="120" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#60A5FA">Markdown Guides</text>
     
   </g>
-
-  <!-- Bottom Identity Bar -->
-  <g transform="translate(32, 405)">
-    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
-    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">DocSynth Documentation Engine</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">Google Docstring Injection • OpenAPI Specification</text>
+  
+  <!-- Metrics Panel -->
+  <g transform="translate(30,240)">
+    <text x="0" y="0" font-family="monospace" font-size="11" fill="#BFDBFE" font-weight="700" letter-spacing="2">PERFORMANCE METRICS</text>
+    <rect x="0" y="10" width="740" height="100" rx="8" fill="#0A1535" stroke="#1D4ED8" stroke-width="1"/>
+    
+      <text x="20" y="38" font-family="monospace" font-size="10" fill="#94A3B8">Accuracy</text>
+      <rect class="docsynthsvg_dot" x="120" y="27" width="113" height="14" rx="3" fill="#2563EB" opacity="0.5" style="animation-delay:0s"/>
+      <text x="243" y="38" font-family="monospace" font-size="11" fill="#2563EB" font-weight="700">86%</text>
+      <text x="20" y="66" font-family="monospace" font-size="10" fill="#94A3B8">Latency</text>
+      <rect class="docsynthsvg_dot" x="120" y="55" width="154" height="14" rx="3" fill="#2563EB" opacity="0.5" style="animation-delay:0.3s"/>
+      <text x="284" y="66" font-family="monospace" font-size="11" fill="#2563EB" font-weight="700">15ms</text>
+      <text x="20" y="94" font-family="monospace" font-size="10" fill="#94A3B8">Throughput</text>
+      <rect class="docsynthsvg_dot" x="120" y="83" width="356" height="14" rx="3" fill="#2563EB" opacity="0.5" style="animation-delay:0.6s"/>
+      <text x="486" y="94" font-family="monospace" font-size="11" fill="#2563EB" font-weight="700">724/s</text>
+  </g>
+  
+  <!-- Bottom Title -->
+  <g transform="translate(30,410)">
+    <line x1="0" y1="-8" x2="740" y2="-8" stroke="#1D4ED8" stroke-width="1"/>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">DocSynth</text>
+    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#2563EB">Auto Docstrings • OpenAPI Specs • Markdown Guides</text>
   </g>
 </svg>

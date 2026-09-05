@@ -1,100 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="bgGrad_aegis-code-linter" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#050811" />
-      <stop offset="100%" stop-color="#0A0F1D" />
+    <linearGradient id="aegiscodelintersvg_bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A0505"/>
+      <stop offset="100%" stop-color="#0D0505"/>
     </linearGradient>
-    
-    <radialGradient id="aura_aegis-code-linter" cx="70%" cy="30%" r="65%">
-      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.22" />
-      <stop offset="50%" stop-color="#00F2FF" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <linearGradient id="accentGrad_aegis-code-linter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#EF4444" />
-      <stop offset="100%" stop-color="#00F2FF" />
-    </linearGradient>
-
-    <pattern id="dotGrid_aegis-code-linter" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.3" />
-    </pattern>
-
-    <filter id="glow_aegis-code-linter" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
+    <filter id="aegiscodelintersvg_g"><feGaussianBlur stdDeviation="5"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+    <style>
+      @keyframes aegiscodelintersvg_pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
+      @keyframes aegiscodelintersvg_flow { 0%{stroke-dashoffset:30} 100%{stroke-dashoffset:0} }
+    </style>
   </defs>
-
-  <!-- Background Base -->
-  <rect width="800" height="450" fill="url(#bgGrad_aegis-code-linter)" />
-  <rect width="800" height="450" fill="url(#dotGrid_aegis-code-linter)" />
-  <rect width="800" height="450" fill="url(#aura_aegis-code-linter)" />
-
-  <!-- Outer HUD Frame Border -->
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="#1E293B" stroke-width="1.5" />
-  <rect x="12" y="12" width="776" height="426" rx="14" fill="none" stroke="url(#accentGrad_aegis-code-linter)" stroke-width="1.5" stroke-opacity="0.4" />
-
-  <!-- Corner HUD Accents -->
-  <path d="M 12 36 L 12 12 L 36 12" fill="none" stroke="#EF4444" stroke-width="2.5" />
-  <path d="M 764 12 L 788 12 L 788 36" fill="none" stroke="#EF4444" stroke-width="2.5" />
-  <path d="M 12 414 L 12 438 L 36 438" fill="none" stroke="#EF4444" stroke-width="2.5" />
-  <path d="M 764 438 L 788 438 L 788 414" fill="none" stroke="#EF4444" stroke-width="2.5" />
-
-  <!-- Top Telemetry Header -->
-  <g transform="translate(32, 38)">
-    <circle cx="4" cy="4" r="3.5" fill="#EF4444" filter="url(#glow_aegis-code-linter)" />
-    <text x="16" y="8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#EF4444" letter-spacing="1.5">SYS // AEGIS-CODE-LINTER</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#64748B">ARCHITECTURE // VERIFIED</text>
-    <line x1="0" y1="18" x2="736" y2="18" stroke="#1E293B" stroke-width="1" />
-  </g>
-
-  <!-- Domain-Specific Interactive Visual Metaphor -->
-  <g transform="translate(40, 75)">
-    
-      <g transform="translate(50, 20)">
-        <rect x="0" y="0" width="300" height="190" rx="8" fill="#0B132B" stroke="#EF4444" stroke-width="1.5" />
-        <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#EF4444">AST SYNTAX TREE & TAINT SCAN</text>
-        
-        <g stroke="#64748B" stroke-width="1.5">
-          <line x1="150" y1="50" x2="80" y2="90" />
-          <line x1="150" y1="50" x2="220" y2="90" />
-          <line x1="80" y1="90" x2="40" y2="135" />
-          <line x1="80" y1="90" x2="120" y2="135" />
-          <line x1="220" y1="90" x2="180" y2="135" />
-          <line x1="220" y1="90" x2="260" y2="135" />
+  <rect width="800" height="450" fill="url(#aegiscodelintersvg_bg)"/>
+  
+      <g transform="translate(40,70)">
+        <text x="0" y="-10" font-family="monospace" font-size="11" fill="#F87171" font-weight="700">AST TAINT PROPAGATION TREE</text>
+        <rect x="0" y="0" width="340" height="220" rx="8" fill="#1F0A0A" stroke="#5F1E1E" stroke-width="1"/>
+        <g stroke="#5F1E1E" stroke-width="1.5">
+          <line x1="170" y1="30" x2="90" y2="80"/><line x1="170" y1="30" x2="250" y2="80"/>
+          <line x1="90" y1="80" x2="50" y2="130"/><line x1="90" y1="80" x2="130" y2="130"/>
+          <line x1="250" y1="80" x2="210" y2="130"/><line x1="250" y1="80" x2="290" y2="130"/>
+          <line x1="50" y1="130" x2="30" y2="175"/><line x1="50" y1="130" x2="70" y2="175"/>
         </g>
-        <circle cx="150" cy="50" r="10" fill="#00F2FF" />
-        <circle cx="80" cy="90" r="8" fill="#8B5CF6" />
-        <circle cx="220" cy="90" r="8" fill="#8B5CF6" />
-        <circle cx="40" cy="135" r="7" fill="#10B981" />
-        <circle cx="120" cy="135" r="8" fill="#EF4444" />
-        <circle cx="180" cy="135" r="7" fill="#10B981" />
-        <circle cx="260" cy="135" r="7" fill="#10B981" />
-        <text x="135" y="165" font-family="monospace" font-size="9" fill="#EF4444">SQLi Taint Node</text>
-
-        <g transform="translate(330, 0)">
-          <rect x="0" y="0" width="360" height="190" rx="8" fill="#0E1626" stroke="#1E293B" stroke-width="1" />
-          <text x="20" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="#F8FAFC">SARIF 2.1.0 COMPLIANCE</text>
-          
-          <rect x="20" y="45" width="320" height="35" rx="4" fill="#1F1515" stroke="#EF4444" stroke-width="1" />
-          <text x="30" y="67" font-family="monospace" font-size="9" fill="#EF4444">[HIGH] CWE-89 SQL Injection detected at L42</text>
-
-          <rect x="20" y="90" width="320" height="35" rx="4" fill="#1E1C12" stroke="#F59E0B" stroke-width="1" />
-          <text x="30" y="112" font-family="monospace" font-size="9" fill="#F59E0B">[WARN] Hardcoded High-Entropy Token (AWS Key)</text>
-
-          <rect x="20" y="135" width="320" height="35" rx="4" fill="#0E1E17" stroke="#10B981" stroke-width="1" />
-          <text x="30" y="157" font-family="monospace" font-size="9" fill="#10B981">[FIXED] RedBaron Auto-Patch AST Transformed</text>
-        </g>
+        <circle cx="170" cy="30" r="12" fill="#0D0505" stroke="#EF4444" stroke-width="2"/><text x="170" y="34" text-anchor="middle" font-family="monospace" font-size="9" fill="#EF4444">Root</text>
+        <circle cx="90" cy="80" r="10" fill="#0D0505" stroke="#F59E0B" stroke-width="2"/><text x="90" y="84" text-anchor="middle" font-family="monospace" font-size="8" fill="#F59E0B">Fn</text>
+        <circle cx="250" cy="80" r="10" fill="#0D0505" stroke="#10B981" stroke-width="2"/><text x="250" y="84" text-anchor="middle" font-family="monospace" font-size="8" fill="#10B981">Cls</text>
+        <circle cx="50" cy="130" r="9" fill="#EF4444" opacity="0.3"/><circle cx="50" cy="130" r="9" fill="none" stroke="#EF4444" stroke-width="2"/><text x="50" y="134" text-anchor="middle" font-family="monospace" font-size="7" fill="#FCA5A5">SQLi</text>
+        <circle cx="130" cy="130" r="9" fill="#0D0505" stroke="#10B981" stroke-width="2"/><text x="130" y="134" text-anchor="middle" font-family="monospace" font-size="7" fill="#10B981">OK</text>
+        <circle cx="210" cy="130" r="9" fill="#0D0505" stroke="#10B981" stroke-width="2"/>
+        <circle cx="290" cy="130" r="9" fill="#F59E0B" opacity="0.2"/><circle cx="290" cy="130" r="9" fill="none" stroke="#F59E0B" stroke-width="2"/><text x="290" y="134" text-anchor="middle" font-family="monospace" font-size="7" fill="#FBBF24">XSS</text>
+        <circle cx="30" cy="175" r="8" fill="#EF4444" opacity="0.4"/><circle cx="30" cy="175" r="8" fill="none" stroke="#EF4444" stroke-width="2"/>
+        <circle cx="70" cy="175" r="8" fill="#0D0505" stroke="#10B981" stroke-width="2"/>
+        <text x="10" y="210" font-family="monospace" font-size="9" fill="#EF4444">● Taint Source  ● Warning  ● Clean</text>
       </g>
-    
-  </g>
-
-  <!-- Bottom Identity Bar -->
-  <g transform="translate(32, 405)">
-    <line x1="0" y1="-12" x2="736" y2="-12" stroke="#1E293B" stroke-width="1" />
-    <text x="0" y="8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#F8FAFC">Aegis Code Linter</text>
-    <text x="736" y="8" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">AST Tree-Sitter Traversal • OWASP Top 10 Security</text>
+      <g transform="translate(420,70)">
+        <text x="0" y="-10" font-family="monospace" font-size="11" fill="#FCA5A5" font-weight="700">SARIF 2.1.0 FINDINGS</text>
+        <rect x="0" y="0" width="340" height="220" rx="8" fill="#1F0A0A" stroke="#5F1E1E" stroke-width="1"/>
+        <rect x="15" y="15" width="310" height="38" rx="4" fill="#2D0A0A" stroke="#EF4444" stroke-width="1"/>
+        <text x="25" y="30" font-family="monospace" font-size="9" fill="#EF4444" font-weight="700">[CRITICAL] CWE-89 SQL Injection</text>
+        <text x="25" y="45" font-family="monospace" font-size="8" fill="#94A3B8">auth/login.py:42 — Unsanitized user input</text>
+        <rect x="15" y="62" width="310" height="38" rx="4" fill="#2D1A0A" stroke="#F59E0B" stroke-width="1"/>
+        <text x="25" y="77" font-family="monospace" font-size="9" fill="#F59E0B" font-weight="700">[HIGH] CWE-79 XSS Reflected</text>
+        <text x="25" y="92" font-family="monospace" font-size="8" fill="#94A3B8">templates/search.html:18 — innerHTML sink</text>
+        <rect x="15" y="109" width="310" height="38" rx="4" fill="#0A2D15" stroke="#10B981" stroke-width="1"/>
+        <text x="25" y="124" font-family="monospace" font-size="9" fill="#10B981" font-weight="700">[FIXED] Auto-patched via RedBaron AST</text>
+        <text x="25" y="139" font-family="monospace" font-size="8" fill="#94A3B8">Parameterized query replacement applied</text>
+        <rect x="15" y="156" width="310" height="38" rx="4" fill="#1A1A0A" stroke="#F59E0B" stroke-width="1"/>
+        <text x="25" y="171" font-family="monospace" font-size="9" fill="#F59E0B" font-weight="700">[WARN] High-Entropy Secret Detected</text>
+        <text x="25" y="186" font-family="monospace" font-size="8" fill="#94A3B8">config.py:7 — AWS_SECRET_ACCESS_KEY pattern</text>
+        <text x="15" y="212" font-family="monospace" font-size="9" fill="#64748B">4 findings • 1 auto-fixed • 2 critical</text>
+      </g>
+  <g transform="translate(30,410)">
+    <line x1="0" y1="-8" x2="740" y2="-8" stroke="#5F1E1E" stroke-width="1"/>
+    <text x="0" y="12" font-family="'Inter',sans-serif" font-size="16" font-weight="800" fill="#F8FAFC">Aegis Code Linter</text>
+    <text x="740" y="12" text-anchor="end" font-family="monospace" font-size="11" fill="#EF4444">AST Traversal • OWASP Top 10 • SARIF 2.1.0</text>
   </g>
 </svg>
